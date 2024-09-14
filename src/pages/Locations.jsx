@@ -1,8 +1,13 @@
+import PagesHero from "../reusables/PagesHero"
 
 
 const Locations = () => {
   return (
-    <div>Locations</div>
+    <div>
+      <PagesHero />
+
+      <h1>Locations</h1>
+    </div>
   )
 }
 

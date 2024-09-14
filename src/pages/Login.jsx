@@ -1,8 +1,13 @@
+import PagesHero from "../reusables/PagesHero"
 
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <PagesHero />
+
+      <h1>LogIn</h1>
+    </div>
   )
 }
 

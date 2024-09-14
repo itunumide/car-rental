@@ -1,8 +1,13 @@
+import PagesHero from "../reusables/PagesHero"
 
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <PagesHero />
+      
+      <h1>About</h1>
+    </div>
   )
 }
 

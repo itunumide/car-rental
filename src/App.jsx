@@ -1,33 +1,28 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./sticky/Header";
-import Home from "./pages/Home"
-import Rent from "./pages/Rent"
-import Locations from "./pages/Locations"
-import FAQ from "./pages/FAQ"
-import About from "./pages/About"
-import Contact from "./pages/Contact"
+import Home from "./pages/Home";
+import Rent from "./pages/Rent";
+import Locations from "./pages/Locations";
+import FAQ from "./pages/FAQ";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rent" element={<Rent />} />
+        <Route path="/locations" element={<Locations />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
+};
 
-      <Router>
-
-        <Routes>
-
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Rent />} />
-          <Route path="/locations" element={<location />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/about" element={<about />} />
-          <Route path="/contact" element={<contact />} />
-
-        </Routes>
-
-      </Router>
-    </div>
-  )
-}
-
-export default App
+export default App;
