@@ -1,28 +1,48 @@
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Button from './Button';
 
 const HeroTextSlider = () => {
   const settings = {
-    dots: true,         // Show navigation dots
-    infinite: true,     // Infinite looping
-    speed: 500,         // Transition speed
-    slidesToShow: 1,    // Show one slide at a time
-    slidesToScroll: 1,  // Scroll one slide at a time
-    autoplay: true,     // Auto-play
-    autoplaySpeed: 3000, // 3-second auto-play interval
-    fade: true,         // Fade effect between slides
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
   };
 
   return (
-    <div className='mt-[15rem] w-[90%] h-[5rem] m-auto border-4 border-white'>
+    <div className="relative top-[15rem] pt-[4rem] w-[90%] h-[20rem] m-auto">
+      <style>
+        {`
+          /* Force all dots to be white */
+          .slick-dots li button:before {
+            color: white !important;  /* Force all dots to be white */
+            opacity: 0.5 !important;  /* Adjust the transparency of inactive dots */
+          }
+
+          /* Active dot */
+          .slick-dots li.slick-active button:before {
+            opacity: 1 !important;    /* Fully opaque for active dot */
+          }
+        `}
+      </style>
       <Slider {...settings} className="relative z-10 text-center">
         <div>
-          <h1 className="text-white text-5xl md:text-6xl font-bold">A Car Rental</h1>
+          <h1 className="text-white pt-[2rem] text-5xl md:text-6xl font-bold mb-10">We are a Car Rental Agency</h1>
+          <Button text="Discover Popular New Cars" />
         </div>
         <div>
-          <h1 className="text-white text-5xl md:text-6xl font-bold">Car Hire Agency</h1>
-        </div>
-        <div>
-          <h1 className="text-white text-5xl md:text-6xl font-bold">Discover Popular New Cars</h1>
+          <p className="text-gray-500 text-[1.2rem]">The best way of renting</p>
+          <h1 className="text-white text-5xl md:text-6xl font-bold mb-10" style={{lineHeight: "4.5rem"}}>
+
+            Best cars to make <br /> Your <span className="text-[#FFCA08]">drive easy</span>
+          </h1>
+          <Button text="Best Offers" />
         </div>
       </Slider>
     </div>
