@@ -11,10 +11,10 @@ import p4 from "../assets/p-4.png";
 const Benefits = () => {
   return (
     <div className="flex justify-center items-center gap-9">
-      <Benefit image={b1} pic={p1}/>
-      <Benefit image={b2} pic={p2}/>
-      <Benefit image={b3} pic={p3}/>
-      <Benefit image={b4} pic={p4}/>
+      <Benefit image={b1} pic={p1} text="No Extra Hidden Fees"/>
+      <Benefit image={b2} pic={p2} text="Multilingual Service"/>
+      <Benefit image={b3} pic={p3} text="24/7 Customer Support"/>
+      <Benefit image={b4} pic={p4} text="100% You Can Trust"/>
     </div>
   );
 }

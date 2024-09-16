@@ -1,15 +1,16 @@
-
-
 const Service = (props) => {
   return (
-    <div>
-        <div className="items-center justify-center mt-[16rem] flex flex-col font-light">
-
-            <p className="py-1 px-12 rounded-3xl bg-[#F1F1F1] text-[1.7rem] italic mb-4">{props.title}</p>
-            <p className="italic text-[2.7rem] font-bold">{props.service} <span className="text-[#FFCA08] underline font-bold">{props.span}</span></p>
-        </div>
+    <div className="flex justify-center mt-[4rem] flex-col font-light">
+      <p className="py-1 px-12 rounded-3xl text-[1.7rem] italic mb-4" style={{backgroundColor: `${props.titlebg}`, color: `${props.titlecolor}`}}>{props.title}</p>
+      <p
+        className="italic text-[2.7rem] font-bold"
+        style={{ color: `${props.color}` }}
+        dangerouslySetInnerHTML={{
+          __html: `${props.service} <span class="text-[#FFCA08] underline font-bold">${props.span}</span>`,
+        }}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Service
+export default Service;

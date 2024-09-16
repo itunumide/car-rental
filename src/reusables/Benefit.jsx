@@ -1,4 +1,4 @@
-const Benefit = ({ image, pic }) => {
+const Benefit = ({ image, pic, text }) => {
     return (
       <div>
         <div 
@@ -14,6 +14,8 @@ const Benefit = ({ image, pic }) => {
           </div>
           
         </div>
+
+        <p className="font-bold mt-14 text-[1.5rem] italic text-center">{text}</p>
       </div>
     );
   }
