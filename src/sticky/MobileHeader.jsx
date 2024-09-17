@@ -93,7 +93,7 @@ const MobileHeader = () => {
 
         <NavLink
           to="/about"
-          className="py-2 px-4 w-full text-center text-black hover:bg-gray-200"
+          className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
           About
@@ -101,7 +101,7 @@ const MobileHeader = () => {
 
         <NavLink
           to="/contact"
-          className="py-2 px-4 w-full text-center text-black hover:bg-gray-200"
+          className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
           Contact
@@ -109,7 +109,7 @@ const MobileHeader = () => {
 
         <NavLink
           to="/login"
-          className="py-2 px-4 w-full text-center text-black hover:bg-gray-200"
+          className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
           Login
