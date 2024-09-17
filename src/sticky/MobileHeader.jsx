@@ -19,7 +19,7 @@ const MobileHeader = () => {
   }, [navigate]);
 
   return (
-    <div className='relative z-20 md:hidden h-14 w-full bg-black flex justify-between items-center px-4'>
+    <div className='relative z-20 md:hidden h-14 w-full bg-black flex justify-between items-center px-4 py-6'>
       <div className="left">
         <Link to={'/'}>
           <img src={carlogo} alt="car logo" className='w-28' />
