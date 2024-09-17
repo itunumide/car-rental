@@ -7,18 +7,23 @@ import Benefits from "../reusables/Benefits";
 import SvgDesignBottom from "../reusables/SvgDesignBottom";
 import herocar from '../assets/car-home-hero.png'
 import LowerPrice from "../reusables/LowerPrice";
+import MobileHeroText from "../reusables/MobileHeroText";
 
 const Home = () => {
   return (
     <div>
-      <div className="Hero relative top-[-5rem] sm:h-screen bg-cover bg-center" style={{ backgroundImage: `url(${carbg})`, height: "62rem" }}>
+      
+      <div className="Hero relative top-0 lg:top-[-5rem] sm:h-[10rem] md:h-[58rem] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
       <div className="overlay absolute top-0 left-0 w-full h-full bg-black/85"></div> {/* Black overlay with opacity */}
           
         <HeroTextSlider />
-         <div className="herocar absolute w-[40rem] left-[50rem] mt-[12rem] z-20">
+        <MobileHeroText />
+
+        <div className="herocar absolute w-[80%] left-[50%] mt-2rem md:w-[40%] md:left-[78%] md:mt-[12rem] transform -translate-x-1/2 z-20">
           <img src={herocar} alt="" />
         </div>
-        <div className="relative top-72 z-10">
+
+        <div className="relative top-[15%]">
           <SvgDesignBottom />
         </div>
       </div>

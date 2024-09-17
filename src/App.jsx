@@ -7,11 +7,13 @@ import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import MobileHeader from "./sticky/MobileHeader";
 
 const App = () => {
   return (
     <Router>
       <Header />
+      <MobileHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rent" element={<Rent />} />
