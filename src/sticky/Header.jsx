@@ -22,7 +22,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/rent"
+              to="/shop"
               className={({ isActive }) =>
                 isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
               }

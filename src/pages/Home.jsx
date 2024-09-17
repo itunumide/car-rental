@@ -13,13 +13,13 @@ const Home = () => {
   return (
     <div>
       
-      <div className="Hero relative top-0 lg:top-[-5rem] sm:h-[10rem] md:h-[58rem] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
+      <div className="Hero relative top-0 lg:top-[-5rem] sm:h-[10rem] md:h-[51rem] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
       <div className="overlay absolute top-0 left-0 w-full h-full bg-black/85"></div> {/* Black overlay with opacity */}
           
         <HeroTextSlider />
         <MobileHeroText />
 
-        <div className="herocar absolute w-[80%] left-[50%] mt-2rem md:w-[40%] md:left-[78%] md:mt-[12rem] transform -translate-x-1/2 z-20">
+        <div className="herocar absolute w-[80%] left-[50%] mt-2rem md:w-[40%] md:left-[78%] md:mt-[12rem] transform -translate-x-1/2 z-10">
           <img src={herocar} alt="" />
         </div>
 
@@ -28,7 +28,7 @@ const Home = () => {
         </div>
       </div>
       
-    <div className="service  w-[70%] m-auto text-center">
+    <div className="service w-4/5 md:w-[70%] m-auto text-center">
 
       <Service 
       title = "Why should you book with us?"

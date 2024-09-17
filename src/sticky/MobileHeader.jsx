@@ -19,7 +19,7 @@ const MobileHeader = () => {
   }, [navigate]);
 
   return (
-    <div className='relative z-20 md:hidden h-14 w-full bg-black flex justify-between items-center px-4'>
+    <div className='relative z-20 md:hidden h-14 w-full bg-black flex justify-between items-center px-4 py-6'>
       <div className="left">
         <Link to={'/'}>
           <img src={carlogo} alt="car logo" className='w-28' />
@@ -93,7 +93,7 @@ const MobileHeader = () => {
 
         <NavLink
           to="/about"
-          className="py-2 px-4 w-full text-center text-black hover:bg-gray-200"
+          className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
           About
@@ -101,7 +101,7 @@ const MobileHeader = () => {
 
         <NavLink
           to="/contact"
-          className="py-2 px-4 w-full text-center text-black hover:bg-gray-200"
+          className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
           Contact
@@ -109,7 +109,7 @@ const MobileHeader = () => {
 
         <NavLink
           to="/login"
-          className="py-2 px-4 w-full text-center text-black hover:bg-gray-200"
+          className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
           Login
