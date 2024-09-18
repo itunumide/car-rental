@@ -4,7 +4,8 @@ import Button from '../reusables/Button';
 
 const Header = () => {
   return (
-    <div className="sticky p-4 top-8 w-4/5 m-auto flex justify-between items-center text-white rounded-[6rem] bg-[#000] z-20">
+  
+    <div className="sticky p-4 hidden top-8 w-4/5 m-auto lg:flex justify-between items-center text-white rounded-[6rem] bg-[#000] z-20">
       <Link to={'/'}><img src={carlogo} alt="car logo" /></Link>
 
       <div className="nav">
@@ -21,7 +22,7 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/rent"
+              to="/shop"
               className={({ isActive }) =>
                 isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
               }
