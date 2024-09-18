@@ -7,10 +7,11 @@ import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Checkout from "./pages/checkout/Checkout";
 import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
+
 
 const App = () => {
   return (
@@ -25,8 +26,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
