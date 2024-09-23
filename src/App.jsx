@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Checkout from "./pages/checkout/Checkout";
 import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
+import LoginPlaceholder from "./pages/forgotPasswordModals/LoginPlaceholder"
 import NotFound from "./pages/NotFound";
 
 
@@ -28,6 +29,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
+        {/* temporary Login Route */}
+        <Route path="/login-placeholder" element={<LoginPlaceholder />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
