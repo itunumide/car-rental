@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       
-      <div className="Hero relative top-0 lg:top-[-5rem] sm:h-[10rem] md:h-[51rem] lg:h-[55rem] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
+      <div className="Hero relative top-0 lg:top-[-5rem] sm:h-[10rem] md:h-[51rem] lg:h-[50rem] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
       <div className="overlay absolute top-0 left-0 w-full h-full bg-black/85"></div> {/* Black overlay with opacity */}
           
         <HeroTextSlider />
@@ -23,10 +23,10 @@ const Home = () => {
           <img src={herocar} alt="" />
         </div>
 
-        <div className="relative top-[22%]">
+        <div className="relative top-[22%] lg:top-[22%]">
           <SvgDesignBottom />
         </div>
-        <div className="belowSvgBottom border-4 border-black mt-[12%] h-[12rem] w-full bg-white">
+        <div className="belowSvgBottom hidden lg:block mt-[10%] h-[8rem] w-full bg-white">
 
         </div>
       </div>
