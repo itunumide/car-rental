@@ -26,7 +26,7 @@ const Home = () => {
         <div className="relative top-[22%]">
           <SvgDesignBottom />
         </div>
-        <div className="belowSvgBottom mt-[10%] h-[10rem] w-full bg-white">
+        <div className="belowSvgBottom border-4 border-black mt-[12%] h-[12rem] w-full bg-white">
 
         </div>
       </div>
