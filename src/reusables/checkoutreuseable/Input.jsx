@@ -8,11 +8,11 @@ const Input = ({
   required,
   id,
   onChange,
-  width = "w-[38.5rem]",
+  width = "md:w-full",
   
 }) => {
   return (
-    <div className={` checkoutInput text-[#595959]  flex flex-col my-[1rem]`}>
+    <div className={`${width} checkoutInput text-[#595959] w-full flex flex-col my-[1rem]`}>
       <label htmlFor={htmlFor} className="my-[1rem]">
         {label}
       </label>
@@ -24,7 +24,7 @@ const Input = ({
         id={id}
         onChange={onChange}
         required={required}
-        className={`${width}  border border-[#dcdcdc] text-[#595959] rounded-3xl h-[3.2rem] p-[1rem] bg-transparent`}
+        className={`  border border-[#dcdcdc] text-[#595959] rounded-3xl h-[3.2rem] p-[1rem] bg-transparent m-auto focus:border focus:border-[#FFCA08] active:bg-red-100 xs:w-full`}
       />
     </div>
   );

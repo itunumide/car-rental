@@ -2,17 +2,18 @@ import Input from "../../reusables/checkoutreuseable/Input";
 
 export const CheckoutLeft = () => {
   return (
-    <div className="billingDetails  w-[53%]">
-      <h1 className="bg-[#1c1601] text-[#ffca06] font-bold text-[1.3rem] w-auto h-[9vh] rounded-full flex items-center px-[2rem]  mx-auto ">
+    <div className="billingDetails pb-[2rem] w-[100%]">
+      <h1 className="bg-[#1c1601] text-[#ffca06] font-bold sm:text[1rem] md:text-[1.3rem] h-[9vh]  flex items-center justify-center  rounded-full  px-[2rem] ">
         Billing details
       </h1>
-      <div className="flex flex-wrap w-[45vw] justify-between m-auto">
+      <div className="flex flex-wrap w-full m-auto">
+      <div className="sm:flex w-full sm:justify-between ">
       <Input 
         htmlFor="firstname"
         label="First name"
         type="text"
         required={true}
-        width="w-[18rem]"
+        width="sm:w-[47%]"
        
       />
       <Input
@@ -20,9 +21,11 @@ export const CheckoutLeft = () => {
         label="Last name"
         type="text"
         required={true}
-        width="w-[18rem]"
+        width="sm:w-[47%]"
+        
        
       />
+      </div>
       <Input
         htmlFor="name"
         label="Company name (optional)"
@@ -78,7 +81,7 @@ export const CheckoutLeft = () => {
         type="email"
         required={true}
       />
-      <div className="w-[38.5rem] flex flex-col">
+      <div className="w-full flex flex-col">
         <h3 className="font-bold text-[1.4rem] my-[1rem]">Additional information</h3>
           <hr className="h-3 w-full " />
           <label htmlFor="" className="my-[1rem] text-[#595959]">Order notes(optional)</label>
