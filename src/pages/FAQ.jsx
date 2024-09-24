@@ -1,12 +1,14 @@
 import React from 'react'
-import Accordion from '../reusables/Accordion';
+import Accordion from '../reusables/Accordion'
 import post from '../assets/post5.jpg'
 import { IoIosHelpCircle, IoIosHelp } from "react-icons/io";
 import { FaComment, FaCarSide, FaCar, FaCarCrash, FaCaravan, FaRegIdCard, FaCarBattery } from "react-icons/fa";
+import PagesHero from '../reusables/PagesHero';
 
 const FAQs = () => {
   return (
     <div>
+      {/* <PagesHero /> */}
       <div className="container-div w-[100%] flex justify-center items-center my-5"> 
         <div className="wrapper w-[95%] flex justify-between items-center">
           <div className="w-[2500px] LHS">
@@ -17,12 +19,15 @@ const FAQs = () => {
 
             <div className="bottom-left bg-formBg rounded-2xl mt-6 shadow-lg">
 
-              <div className="ask-us w-[100px] flex justify-between items-center">
-                <div className="comment-icon-hold bg-customYellow w-10 h-10 rounded-full flex justify-center items-center">
-                  <FaComment color='#000' />
-                </div>
+              <div className="ask-us-div w-[350px] flex ">
+                <div className="ask-us w-[120px] flex justify-between items-center ml-8 mt-10 mb-6">
+                  <div className="comment-icon-hold bg-customYellow w-12 h-12 rounded-full flex   justify-center items-center">
+                    <FaComment color='#000' size='23px' />
+                  </div>
+               
 
-                <h4 className='font-bold text-white'>Ask Us</h4>
+                  <h4 className='font-bold text-xl text-white'>Ask Us</h4>
+                </div>
               </div>
 
               <form action="" autoComplete='on' className='flex flex-col justify-center items-center text-customAccordionColor'>
