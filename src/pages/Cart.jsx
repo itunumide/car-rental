@@ -3,8 +3,20 @@ import car1 from "../assets/car-1.png"
 import car2 from "../assets/car-2.png"
 import car3 from "../assets/car-3.png"
 import car4 from "../assets/car-4.png"
+import { useState } from "react"
 
 const Cart = () => {
+    const [count, setCount] =useState(0)
+    const [countDown, setCountDown] =useState(0)
+
+    const increament = () => {
+      setCount(count + 1);
+    }
+    const decreament = () => {
+      setCount(count - 1)
+    }
+  
+
   return (
     <div>
         <PagesHero />
@@ -43,9 +55,9 @@ const Cart = () => {
           <tr>
           <th className="  px-4 py-5">Quality</th>
           <td  className="lg:border-0 py-5 pl-5 flex items-center gap-2">
-                <button className="border-0 rounded-full hover:bg-green-950 duration-300 py-2 px-4 text-center   text-xl bg-stone-200">-</button> 
-                <h4 className="px-7 rounded-3xl text-xl py-2 border-2">2</h4>
-                <button className="bg-stone-200 hover:bg-green-950 duration-300 px-4 text-xl rounded-full  py-2">+</button> 
+                <button onClick={decreament} className="border-0 rounded-full hover:bg-green-950 duration-300 py-2 px-4 text-center   text-xl bg-stone-200">-</button> 
+                <h4 className="px-7 rounded-3xl text-xl py-2 border-2">{count}</h4>
+                <button onClick={increament} className="bg-stone-200 hover:bg-green-950 duration-300 px-4 text-xl rounded-full  py-2">+</button> 
               </td>
           </tr>
           <tr>
@@ -70,9 +82,9 @@ const Cart = () => {
               <td className="border font-bold pl-5"><h3 className="product-name">Car2<br/><span  className="font-normal">sku:skuy</span></h3></td>
               <td className="border text-lg pl-5"><h4>$500</h4></td>
               <td  className="border lg:border-0 py-5 pl-5 flex items-center gap-2">
-                <button className="border-0 rounded-full hover:bg-green-950 duration-300 py-2 px-4 text-center   text-xl bg-stone-200">-</button> 
-                <h4 className="px-7 rounded-3xl text-xl py-2 border-2">2</h4>
-                <button className="bg-stone-200 hover:bg-green-950 duration-300 px-4 text-xl rounded-full  py-2">+</button> 
+                <button  onClick={decreament}  className="border-0 rounded-full hover:bg-green-950 duration-300 py-2 px-4 text-center   text-xl bg-stone-200">-</button> 
+                <h4 className="px-7 rounded-3xl text-xl py-2 border-2">{count}</h4>
+                <button onClick={increament} className="bg-stone-200 hover:bg-green-950 duration-300 px-4 text-xl rounded-full  py-2">+</button> 
               </td>
               <td className="border pl-5"><h4>$500</h4></td>
             </tr>
@@ -99,11 +111,11 @@ const Cart = () => {
           <h2 className=" bottom-0 py-4 pl-8 w-11/12 text-left text-lg lg:text-2xl font-bold rounded-full ml-5 bg-black text-amber-400">You may be interested in ...</h2>
           <div className="flex my-10 gap-2 px-5 w-full justify-around">
             <div className="border-none text-center h-40  rounded-lg border-slate-800">
-              <img className="h-64  border-4 rounded-t-lg border-green-950 " src={car3}alt="" />
+              <img id="cart-img" className="h-64  border-4 rounded-t-lg border-green-950 " src={car3}alt="" />
               <a className="text-xl font-bold text-amber-300" href=""><h4 className="py-4 rounded-b-lg hover:bg-amber-400 hover:text-black duration-300 bg-green-950"> <i class="ri-shopping-cart-2-line"></i>Add to cart</h4></a>
             </div>
             <div className="border-none h-40 text-center rounded-lg border-slate-800">
-              <img className="h-64 border-4 rounded-t-lg border-green-950 " src={car2}alt="" />
+              <img id="cart-img" className="h-64 border-4 rounded-t-lg border-green-950 " src={car2}alt="" />
               <a className="text-xl font-bold text-amber-300" href=""><h4 className="py-4 rounded-b-lg hover:bg-amber-400 hover:text-black duration-300 bg-green-950"> <i class="ri-shopping-cart-2-line"></i>Add to cart</h4></a>
             </div>
           </div>

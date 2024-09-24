@@ -57,14 +57,22 @@ button{
   width: 100%;
 }
 #cart-totals{
-  width: 95%;
+  width: 100%;
   align-self: center;
+  margin: 0;
 }
 #whole-table{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+tfoot td{
+  padding: 0;
+  border-top: none;
+}
+#cart-img{
+  height: 160px;
 }
  }
  @media screen and (min-width:480.01px)and (max-width:800px) {
@@ -102,7 +110,7 @@ button{
     float: right;
   }
   #cart-totals{
-    width: 100%;
+    width: 95%;
   }
   #small-screen-tb{
     display: none;
