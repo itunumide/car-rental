@@ -9,11 +9,8 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
-<<<<<<< HEAD
-=======
 import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
->>>>>>> main
 
 const App = () => {
   return (
