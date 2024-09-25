@@ -68,7 +68,7 @@ const MobileHeader = () => {
         </NavLink>
         
         <NavLink
-          to="/rent"
+          to="/shop"
           className="py-2 px-4 w-full text-center text-black hover:bg-yellow-500"
           onClick={toggleMenu}
         >
