@@ -6,7 +6,7 @@ const PagesHero = () => {
     <div className='relative w-full h-[18rem] md:h-[24rem] mt-[-5rem] bg-cover bg-center' style={{backgroundImage: `url(${carbg})`}}>
       
      
-      <div className="overlay absolute inset-0 bg-black opacity-50"></div> 
+      <div className="overlay absolute inset-0 bg-black opacity-70"></div> 
 
       <h1 className='relative flex justify-center top-[65%] text-white z-10'>
         <Breadcrumb />
