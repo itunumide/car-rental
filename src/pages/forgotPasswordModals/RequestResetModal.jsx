@@ -83,7 +83,7 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
 
         {/* Back to login */}
         <div className="mt-6">
-          <Link to="/login-placeholder" className="text-sm text-gray-600 inline-flex items-center">
+          <Link to="/login" className="text-sm text-gray-600 inline-flex items-center">
             {/* Arrow with no underline on hover */}
             <span className="mr-2 hover:no-underline">&larr;</span>
 

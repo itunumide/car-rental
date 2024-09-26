@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link} from 'react-router-dom';
 
 const ResetPasswordModal = ({ onNext }) => {
     const [password, setPassword] = useState('');
@@ -18,7 +19,7 @@ const ResetPasswordModal = ({ onNext }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
                 <div className="w-full max-w-md mx-auto text-center">
 
@@ -91,7 +92,7 @@ const ResetPasswordModal = ({ onNext }) => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="w-full bg-custom-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-custom-yellow-400 focus:outline-none"
+                            className="w-full bg-custom-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-custom-yellow-400 focus:outline-none border-none"
                         >
                             Reset password
                         </button>

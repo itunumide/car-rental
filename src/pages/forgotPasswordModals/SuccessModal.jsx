@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // React Router hook for programmatic navigation
+import { Link, useNavigate } from 'react-router-dom'; // React Router hook for programmatic navigation
 
 const SuccessModal = () => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const SuccessModal = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50">
        <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
             <div className="w-full max-w-md mx-auto text-center">
 
