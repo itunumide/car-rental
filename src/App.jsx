@@ -15,6 +15,7 @@ import UseVerificationFlow from './pages/verifyAccount/UseVerificationFlow';
 import VerificationCode from "./pages/verifyAccount/VerificationCode";
 import VerificationSuccess from "./pages/verifyAccount/VerificationSuccess";
 import NotFound from "./pages/NotFound";
+import Footer from "./sticky/Footer";
 
 
 const App = () => {
@@ -39,11 +40,9 @@ const App = () => {
         <Route path="/verification-success" element={<VerificationSuccess onLoginRedirect={handleLoginRedirect} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+     <Footer />
     </Router>
   );
 };
 
 export default App;
-
-{step === 2 && <VerificationForm email={email} onVerificationSuccess={handleVerificationSuccess} />}
-{step === 3 && <VerificationSuccess onLoginRedirect={handleLoginRedirect} />}

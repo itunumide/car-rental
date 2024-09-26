@@ -19,6 +19,7 @@ export default {
           900: '#996a04',       // Darkest shade
         },
       }
+      
     },
   },
   plugins: [],
