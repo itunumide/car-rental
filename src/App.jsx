@@ -11,6 +11,7 @@ import Checkout from "./pages/checkout/Checkout";
 import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import Footer from "./sticky/Footer";
 
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-     
+     <Footer />
     </Router>
   );
 };
