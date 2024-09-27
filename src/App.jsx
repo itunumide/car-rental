@@ -12,6 +12,7 @@ import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import Footer from "./sticky/Footer";
+import ScrollToTopButton from "./pages/ScrollToTopButton";
 
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
      <Footer />
+     <ScrollToTopButton />
     </Router>
   );
 };
