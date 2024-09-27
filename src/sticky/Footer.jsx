@@ -11,12 +11,12 @@ const Footer = () => {
             <SvgDesignTop />
         </div>
         
-        <div className="footer relative bg-[#1c1601] flex flex-col pb-10 gap-8">
-            <div className="top relative flex flex-col md:flex-row items-center justify-start md:justify-center gap-10 md:gap-[6rem]">
+        <div className="footer relative bg-[#1c1601] flex flex-col gap-8">
+            <div className="top relative flex flex-col md:flex-row items-center justify-start gap-10 md:gap-[6rem]">
 
             
                 <div className="left ">
-                    <div className="footercar  -mt-16">
+                    <div className="footercar 2xl:ml-20 -mt-16">
                         <img src={footercar} alt="" style={{width: "40rem"}}/>
                     </div>
                 </div>
