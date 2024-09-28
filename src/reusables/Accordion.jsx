@@ -17,7 +17,7 @@ const Accordion = ({ title, content, icon }) => {
                 onClick={toggleAccordion}
             >
                 <div className="icon-hold mr-2.5">{icon}</div>
-                <h2 className='text-lg font-semibold flex-1'>{title}</h2>
+                <h2 className='text-lg font-semibold flex-1 500px:text-[10px]'>{title}</h2>
                 <span className="text-xl">{isOpen ? '-' : '+'}</span>
             </div>
 

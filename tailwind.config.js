@@ -13,6 +13,10 @@ export default {
         customGray: '#1e1e1e',
         formBg: '#1C1601',
       },
+
+      screens: {
+        '500px': {'max': '500px'},
+      }
     },
   },
   plugins: [],
