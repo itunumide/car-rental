@@ -13,7 +13,7 @@ const ServicePricing = (props) => {
           }}
         />
 
-        <p className='text-[#a3a198] text-[1.05rem] font-normal italic mt-10 w-[80%] leading-8 mb-12'>Car Rental is a leader in online car rental reservations; we compare car rental deals from many companies so that you can choose which is best for your trip.</p>
+        <p className='text-[#a3a198] text-[1.05rem] font-normal italic mt-10 w-[70%] leading-8 mb-12'>Car Rental is a leader in online car rental reservations; we compare car rental deals from many companies so that you can choose which is best for your trip.</p>
 
         <Button 
         text = "Check out cars"

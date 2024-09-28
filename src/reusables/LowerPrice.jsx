@@ -1,31 +1,33 @@
-import SvgDesignTop from "./SvgDesignTop"
+import SvgDesignPricingT from "./SvgDesignPricingT"
+import SvgDesignPricingB from "./SvgDesignPricingB"
 import pricescar from '../assets/prices-car.png'
-import Service from "./Service"
-import pricesimg from '../assets/prices-img.png'
+import pricescarb from '../assets/car-pricing-bottom.png'
 import PricePlan from "./PricePlan"
 import ServicePricing from "./ServicePricing"
-import Button from "./Button"
+import PricePlanSmall from "./PricePlanSmall"
 
 const LowerPrice = () => {
   return (
     <div className="mt-[10rem]">
-        <div className="pricescar absolute w-[40rem] mt-[6rem]">
+        <div className="pricescar absolute w-[40%] mt-[6%]">
             <img src={pricescar} alt="" />
         </div>
-        <SvgDesignTop />
+        <SvgDesignPricingT />
         
-        <div className="content px-[12%] w-full pt-[12rem] bg-[#1C1601] flex gap-8">
+        <div className="content px-[8%] w-full py-[8rem] bg-[#1C1601] flex justify-between">
             <div className="left w-3/6">
                 <ServicePricing />
             </div>
 
-            <div className="price-plan">
+            <div className="price-plan flex items-center justify-center">
                 <PricePlan />
+                <PricePlanSmall />
             </div>
+        </div>
 
-            {/* <div className="right w-4/6 border-2 border-white">
-                <img src={pricesimg} alt="" width={""} />
-            </div> */}
+        <SvgDesignPricingB />
+        <div className="car-pri-b absolute w-[40%] -mt-[30%] ml-[58%]">
+            <img src={pricescarb} alt="" />
         </div>
     </div>
   )
