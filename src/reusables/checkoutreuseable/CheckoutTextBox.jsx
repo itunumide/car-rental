@@ -10,11 +10,11 @@ const CheckoutTextBox = ({ type, text, paragraph }) => {
    };
   return (
     <div className="relative">
-      <div className="absolute sm:top-[1rem] sm:left-[-0.5rem] bg-[#fcfcfc] border border-[#f4f4f4] border-[0.4rem] p-[0.6rem] xs:top-[-1.8rem] xs:left-[38%] ">
+      <div className="absolute sm:top-[1rem] sm:left-[-0.5rem] bg-[#fcfcfc] border border-[#f4f4f4] border-[0.4rem] p-[0.6rem] top-[-1.8rem] left-[38%] ">
         <img src={fileicon} alt="fileicon" />
       </div>
       <div>        {type === "link" && (
-          <p className="bg-[#f4f4f4] xs:text-center sm:text-left font-bold px-[3.2rem] sm:ml-[1.5rem] xs:pt-[3rem] xs:text-[1rem]  xs:pb-[2rem] sm:py-[2rem] sm:text-[1.1rem] ">
+          <p className="bg-[#f4f4f4] text-center sm:text-left font-bold px-[3.2rem] sm:ml-[1.5rem] pt-[3rem] text-[1rem]  pb-[2rem] sm:py-[2rem] sm:text-[1.1rem] ">
             {paragraph}{" "}
             <a href="#"  onClick={toggleCoupon} className="text-black font-bold mx-2 hover:text-[#FFCA08]">
               {text}
@@ -34,7 +34,7 @@ const CheckoutTextBox = ({ type, text, paragraph }) => {
          
         
         {type !== "link" && (
-          <p className="bg-[#f4f4f4] font-bold px-[3.2rem] xs:pt-[3rem] xs:text-[1rem]  sm:ml-[1.5rem] sm:text-left xs:pb-[2rem] xs:text-center sm:py-[2rem] sm:text-[1.1rem] xs:leading-[1.8rem] md:leading-[2.5rem]">
+          <p className="bg-[#f4f4f4] font-bold px-[3.2rem] pt-[3rem] text-[1rem]  sm:ml-[1.5rem] sm:text-left pb-[2rem] text-center sm:py-[2rem] sm:text-[1.1rem] leading-[1.8rem] md:leading-[2.5rem]">
             {text}
           </p>
         )}

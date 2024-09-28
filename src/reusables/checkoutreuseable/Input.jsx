@@ -1,12 +1,11 @@
 const Input = ({
   htmlFor,
   label,
-  type,
+  type = "text",
   name,
   value,
   placeholder,
-  required,
-  id,
+  isRequired,
   onChange,
   width = "md:w-full",
   
@@ -15,16 +14,17 @@ const Input = ({
     <div className={`${width} checkoutInput text-[#595959] w-full flex flex-col my-[1rem]`}>
       <label htmlFor={htmlFor} className="my-[1rem]">
         {label}
+        {isRequired && <span className="text-red-500 ml-1">*</span>}
       </label>
       <input
         type={type}
         name={name}
         value={value}
         placeholder={placeholder}
-        id={id}
+        id={ htmlFor}
         onChange={onChange}
-        required={required}
-        className={`  border border-[#dcdcdc] text-[#595959] rounded-3xl h-[3.2rem] p-[1rem] bg-transparent m-auto focus:border focus:border-[#FFCA08] active:bg-red-100 xs:w-full`}
+        required={isRequired}
+        className={`  border border-[#dcdcdc] text-[#595959] rounded-3xl h-[3.2rem] p-[1rem] bg-transparent m-auto focus:border focus:border-[#FFCA08] active:bg-red-100 w-full`}
       />
     </div>
   );

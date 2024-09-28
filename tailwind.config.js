@@ -5,17 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-<<<<<<< HEAD
-    extend: {screens: {
-      'xs': '350px',
-      'sm': '500px', 
-      'md': '768px',  
-    },},
-=======
+
     extend: {
       
     },
->>>>>>> main
+
   },
   plugins: [
     require('tailwindcss'),
