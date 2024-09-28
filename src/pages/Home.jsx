@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       
-      <div className="Hero relative top-0 lg:top-[-5rem] sm:h-[10rem] md:h-[51rem] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
+      <div className="Hero relative top-0 md:top-[-6rem] sm:h-[10rem] md:h-[105vh] lg:h-[115vh] 2xl:h-[120vh] bg-cover" style={{ backgroundImage: `url(${carbg})` }}>
       <div className="overlay absolute top-0 left-0 w-full h-full bg-black/85"></div> {/* Black overlay with opacity */}
           
         <HeroTextSlider />
@@ -23,12 +23,15 @@ const Home = () => {
           <img src={herocar} alt="" />
         </div>
 
-        <div className="relative top-[15%]">
+        <div className="relative block 2xl:hidden top-[22%]">
           <SvgDesignBottom />
         </div>
+        {/* <div className="belowSvgBottom hidden lg:block mt-[10%] h-[8rem] w-full bg-white">
+
+        </div> */}
       </div>
       
-    <div className="service w-4/5 md:w-[70%] m-auto text-center">
+    <div className="service relative w-4/5 md:w-[70%] m-auto text-center lg:mt-[4rem]">
 
       <Service 
       title = "Why should you book with us?"
