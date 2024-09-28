@@ -8,6 +8,7 @@ import SvgDesignBottom from "../reusables/SvgDesignBottom";
 import herocar from '../assets/car-home-hero.png'
 import LowerPrice from "../reusables/LowerPrice";
 import MobileHeroText from "../reusables/MobileHeroText";
+import CarRental from "../reusables/CarRental";
 
 const Home = () => {
   return (
@@ -46,6 +47,8 @@ const Home = () => {
       <Benefits />
 
       <LowerPrice />
+
+      <CarRental />
     </div>
   )
 }
