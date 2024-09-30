@@ -69,7 +69,7 @@ const Cart = () => {
           </tbody>
         </table>
           <table id="table" className="border-2 w-11/12 divide-y border-seperate  divide-gray-200 border-gray-300 text-left">
-          <thead className="bg-stone-100 font-bold">
+          <thead className="thead bg-stone-100 font-bold">
             <tr className=" ">
               <th className="border p-4 py-6 "></th>
               <th className="border px-4 pl-5"></th>
@@ -95,7 +95,7 @@ const Cart = () => {
            
             <tr className="coupon ">
               <td className=" whitespace-nowrap p-4 "colSpan="6"> 
-                <input id="apply"  placeholder="Coupon Code"  className="border-2 outline-amber-500 px-10  py-3 text-base text-gray-400 pl-3 pr-20 rounded-3xl text-left mr-1">
+                <input id="apply"  placeholder="Coupon Code"  className="border-2 outline-amber-500 px-10  py-3 text-base text-gray-400 pl-3 pr-20 rounded-3xl text-left ">
                 </input>
                 <button id="apply" className="border-2 outline-none   px-10 text-center bg-amber-400 py-3 text-base font-bold hover:bg-white hover:border-yellow-500 hover:text-yellow-500 rounded-3xl ">
                   Apply Coupon
