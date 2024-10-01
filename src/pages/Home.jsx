@@ -9,6 +9,8 @@ import herocar from '../assets/car-home-hero.png'
 import LowerPrice from "../reusables/LowerPrice";
 import MobileHeroText from "../reusables/MobileHeroText";
 import CarRental from "../reusables/CarRental";
+import CarStat from "./CarStat";
+import Testimonial from "../reusables/Testimonial";
 
 const Home = () => {
   return (
@@ -49,6 +51,10 @@ const Home = () => {
       <LowerPrice />
 
       <CarRental />
+
+      <CarStat />
+
+      <Testimonial />
     </div>
   )
 }
