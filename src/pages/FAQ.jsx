@@ -1,4 +1,5 @@
 import React from 'react'
+import PagesHero from '../reusables/PagesHero';
 import Accordion from '../reusables/Accordion'
 import post from '../assets/post5.jpg'
 import { IoIosHelpCircle, IoIosHelp } from "react-icons/io";
@@ -7,6 +8,7 @@ import { FaComment, FaCarSide, FaCar, FaCarCrash, FaCaravan, FaRegIdCard, FaCarB
 const FAQs = () => {
   return (
     <div>
+      <PagesHero />
       <div className="container-div w-[100%] flex justify-center items-center my-5"> 
         <div className="wrapper w-[95%] flex justify-between items-center 500px:flex 500px:flex-col-reverse">
           <div className="LHS w-[2500px] 500px:w-full ">
