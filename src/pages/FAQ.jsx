@@ -31,7 +31,7 @@ const FAQs = () => {
               </div>
 
               <form action="" autoComplete='on' className='flex flex-col justify-center items-center text-customAccordionColor'>
-                <div className="name-email flex w-[350px] justify-between 500px:flex 500px:flex-col 500px:leading-4">
+                <div className="name-email flex w-[350px] justify-between items-center 500px:flex 500px:flex-col 500px:leading-4">
                   <div className="name text-sm">
                     <label className=''> Your Name (*)</label> <br />
                     <input type="text"  className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px]'/>
@@ -52,7 +52,13 @@ const FAQs = () => {
 
                   <div className="department flex flex-col leading-loose">
                     <label>Department</label>
-                    <input type="text" className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px]'/>
+                    <select name="" id="" className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px]'>
+                      <option value="department">Business Department</option>
+                      <option value="department"></option>
+                      <option value="department">Personal Department</option>
+                      <option value="department">Support Department</option>
+                      <option value="department">Others</option>
+                    </select>
                   </div>
                   <br />
 
