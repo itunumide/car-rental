@@ -4,7 +4,7 @@ import Service from "./Service"
 
 const CarRental = () => {
   return (
-    <div className="mb-[25rem]">
+    <div className="mb-[26rem]">
       <div className="service w-3/5 m-auto text-center">
         <Service 
         title = "Car rental and much more"

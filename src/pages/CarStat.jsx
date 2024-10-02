@@ -23,7 +23,7 @@ const CarStat = () => {
                 />
             </div>
 
-            <div className="stats mt-16 flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="stats mt-16 flex flex-col md:flex-row flex-wrap items-center justify-center gap-6">
               <div className="stats">
                 <Stat 
                 stat = "145"
