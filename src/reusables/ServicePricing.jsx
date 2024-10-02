@@ -3,8 +3,8 @@ import Button from "./Button";
 
 const ServicePricing = (props) => {
     return (
-      <div className="flex justify-center flex-col font-light">
-        <p className="py-2 w-[60%] px-3 md:px-12 rounded-3xl text-[0.7rem] md:text-[1.3rem] italic mb-8" style={{backgroundColor: "#221B01", color: "#cecece"}}>Why are our prices lower?</p>
+      <div className="flex items-center md:items-start justify-center flex-col font-light">
+        <p className="py-2 w-[60%] px-3 md:px-12 rounded-3xl text-[0.7rem] md:text-[1.3rem] italic mb-8" style={{backgroundColor: `${props.titlebg}`, color: `${props.titlecolor}`}}>{props.title}</p>
         <p
           className="italic text-[1.2rem] md:text-[2.7rem] font-bold"
           style={{ color: "white" }}
