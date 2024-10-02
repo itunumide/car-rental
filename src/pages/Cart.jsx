@@ -23,14 +23,14 @@ const Cart = () => {
         <PagesHero />
         <div id="shopping-cart" className=" mb-20 ">
       <ul className="list-none flex items-center justify-center gap-10 mt-28 text-sm md:text-2xl border-red-400 lg:text-3xl">
-        <li className=" flex items-center gap-2">
+        <Link to={"cart"} className=" flex items-center gap-2">
          <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">1</span> Shopping Cart
-        </li> 
-        <i class="ri-arrow-right-line opacity-25"></i>
-        <li className=" flex items-center gap-2 opacity-25">
+        </Link> 
+        <i className="ri-arrow-right-line opacity-25"></i>
+        <Link to={"Checkout"} className=" flex items-center gap-2 opacity-25">
           <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">2</span> Checkout Details
-        </li>
-        <i class="ri-arrow-right-line opacity-25"></i>
+        </Link>
+        <i className="ri-arrow-right-line opacity-25"></i>
         <li className=" flex items-center gap-2 opacity-25">
           <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">3</span>Order Complete
         </li>
@@ -40,7 +40,7 @@ const Cart = () => {
         <table id="small-screen-tb" className="border-2 w-11/12 divide-y border-seperate lg:hidden md:hidden  divide-gray-200 border-gray-300 text-left">
           <tr>
             <th id="img" className="py-5 pl-5"><img className="h-20 w-24 rounded-xl " src={car1} alt="" /></th>
-            <td className="float-end"><i class="ri-close-large-fill text-red-600 text-xl"></i></td>
+            <td className="float-end"><i className="ri-close-large-fill text-red-600 text-xl"></i></td>
           </tr>
           <tr>
           <th className="px-4 py-5">Product</th>
@@ -75,7 +75,7 @@ const Cart = () => {
             </tr>
             </thead>
             <tr className="large-scrn">
-              <td className="border pl-5"><i class="ri-close-large-fill text-red-600 text-xl"></i></td>
+              <td className="border pl-5"><i className="ri-close-large-fill text-red-600 text-xl"></i></td>
               <td id="img" className="border py-5 pl-5"><img className="h-20 w-24 rounded-xl " src={car1} alt="" /></td>
               <td className="border font-bold pl-5"><h3 className="product-name">Car2<br/><span  className="font-normal">sku:skuy</span></h3></td>
               <td className="border text-lg pl-5"><h4>$500</h4></td>
@@ -110,11 +110,11 @@ const Cart = () => {
           <div className="flex my-10 gap-2 px-5 w-full justify-around">
             <div className="border-none text-center h-40  rounded-lg border-slate-800">
               <img id="cart-img" className="h-64  border-4 rounded-t-lg border-green-950 " src={car3}alt="" />
-              <a className="text-xl font-bold text-amber-300" href=""><h4 className="py-4 rounded-b-lg hover:bg-amber-400 hover:text-black duration-300 bg-green-950"> <i class="ri-shopping-cart-2-line"></i>Add to cart</h4></a>
+              <a className="text-xl font-bold text-amber-300" href=""><h4 className="py-4 rounded-b-lg hover:bg-amber-400 hover:text-black duration-300 bg-green-950"> <i className="ri-shopping-cart-2-line"></i>Add to cart</h4></a>
             </div>
             <div className="border-none h-40 text-center rounded-lg border-slate-800">
               <img id="cart-img" className="h-64 border-4 rounded-t-lg border-green-950 " src={car2}alt="" />
-              <a className="text-xl font-bold text-amber-300" href=""><h4 className="py-4 rounded-b-lg hover:bg-amber-400 hover:text-black duration-300 bg-green-950"> <i class="ri-shopping-cart-2-line"></i>Add to cart</h4></a>
+              <a className="text-xl font-bold text-amber-300" href=""><h4 className="py-4 rounded-b-lg hover:bg-amber-400 hover:text-black duration-300 bg-green-950"> <i className="ri-shopping-cart-2-line"></i>Add to cart</h4></a>
             </div>
           </div>
           </div>
