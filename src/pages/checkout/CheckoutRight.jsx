@@ -1,6 +1,7 @@
+import Button from "../../reusables/checkoutreuseable/Button";
 import CheckoutTextBox from "../../reusables/checkoutreuseable/CheckoutTextBox";
 
-export const CheckoutRight = () => {
+export const CheckoutRight = ({ handleSubmit }) => {
   return (
     <div className="orderSummary text-[#0d0d0d] w-[100%] ">
       <h1 className="bg-[#1c1601] text-[#ffca06] font-bold  sm:text-[1.3rem]  h-[9vh]  flex items-center justify-center sm:justify-start  rounded-full  px-[2rem] ">
@@ -52,9 +53,7 @@ export const CheckoutRight = () => {
         </div>
         <hr className="h-3  mx-3 mb-[1rem] mt-[3rem] md:mt-[4rem] " />
         <div className="w-[90%] m-auto">
-          <button className="px-8 h-12 w-full font-bold rounded-3xl text-black text-[1.1rem] p-3  bg-[#FFCA08]">
-            Place order
-          </button>
+          <Button onClick={handleSubmit} text="Place order" />
         </div>
       </div>
     </div>
