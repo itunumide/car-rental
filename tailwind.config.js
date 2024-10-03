@@ -5,9 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
     extend: {
       colors: {
+
         'custom-yellow': {       // This defines a color named `custom-yellow`
           100: '#fff4cc',       // Lightest shade
           200: '#ffe999',       // Lighter shade
@@ -23,6 +23,18 @@ export default {
       
     },
 
+        customYellow: '#ffca08',
+        customP: '#aaaaaa',
+        customAccordionColor: '#5b5748',
+        customGray: '#1e1e1e',
+        formBg: '#1C1601',
+      },
+
+
+      screens: {
+        '500px': {'max': '500px'},
+      }
+    },
   },
   plugins: [
     require('tailwindcss'),
