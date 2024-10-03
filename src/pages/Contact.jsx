@@ -4,7 +4,7 @@ import PagesHero from "../reusables/PagesHero"
 const Contact = () => {
   return (
     <div>
-      <PagesHero />
+      {/* <PagesHero /> */}
 
       <h1>Contact</h1>
     </div>
