@@ -5,6 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
     extend: {
       colors: {
         'custom-yellow': {       // This defines a color named `custom-yellow`
@@ -21,6 +22,21 @@ export default {
       }
       
     },
+
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    ({ addUtilities }) => {
+      addUtilities({
+        '.scrollbar-hidden': {
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          },
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none'
+        }
+      })
+    }
+  ],
 }

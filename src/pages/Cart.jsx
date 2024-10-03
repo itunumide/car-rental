@@ -4,6 +4,8 @@ import car2 from "../assets/car-2.png"
 import car3 from "../assets/car-3.png"
 import car4 from "../assets/car-4.png"
 import { useState } from "react"
+import { useNavigate, Link } from "react-router-dom";
+
 
 const Cart = () => {
     const [count, setCount] =useState(1)
@@ -12,33 +14,29 @@ const Cart = () => {
       setCount(count + 1);
     };
     const decreament = () => {
-      if (count > 1) {
-      setCount(count - 1);
-      }
-    };
-    
+      setCount(count - 1)
+    }
+  
 
   return (
     <div>
         <PagesHero />
         <div id="shopping-cart" className=" mb-20 ">
-      <ul className="list-none flex items-center justify-center gap-10 mt-28 text-sm md:text-2xl border-red-400 lg:text-3xl">
+        <ul className="list-none flex items-center justify-center gap-10 mt-28 text-sm md:text-2xl border-red-400 lg:text-3xl">
         <li className=" flex items-center gap-2">
          <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">1</span> Shopping Cart
         </li> 
-        <i className="ri-arrow-right-line opacity-25"></i>
+        <i class="ri-arrow-right-line opacity-25"></i>
         <li className=" flex items-center gap-2 opacity-25">
           <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">2</span> Checkout Details
         </li>
-        <i className="ri-arrow-right-line opacity-25"></i>
+        <i class="ri-arrow-right-line opacity-25"></i>
         <li className=" flex items-center gap-2 opacity-25">
           <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">3</span>Order Complete
         </li>
       </ul>
       </div>
-      <div>
-       
-      </div>
+      <div></div>
         <div id="whole-table"  className=" flex flex-col items-center mb-20 justify-center">
         <table id="small-screen-tb" className="border-2 w-11/12 divide-y border-seperate lg:hidden md:hidden  divide-gray-200 border-gray-300 text-left">
         <tbody>
@@ -140,7 +138,7 @@ const Cart = () => {
             </tr>
             </tbody>
           </table>
-          <button className="border-2 px-10 bg-amber-400 mr-14 self-end w-5/6 mb-8 md:w-64  float-right py-3 hover:border-yellow-500  hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
+          <button onClick={handleCheckoutClick} className="border-2 px-10 bg-amber-400 mr-14 self-end w-5/6 mb-8 md:w-64  float-right py-3 hover:border-yellow-500  hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
                   Proceed to Checkout
                 </button>
           </div>
