@@ -8,7 +8,7 @@ import PricePlanSmall from "./PricePlanSmall"
 
 const LowerPrice = () => {
   return (
-    <div className="mt-[10rem]">
+    <div className="mt-[5rem]">
         <div className="pricescar absolute w-[85%] md:w-[40%] mt-[6%]">
             <img src={pricescar} alt="" />
         </div>
@@ -23,7 +23,7 @@ const LowerPrice = () => {
                 />
             </div>
 
-            <div className="price-plan space-y-8 flex flex-col md:flex-row items-center md:items-start lg:justify-center mt-10 md:mt-2">
+            <div className="price-plan space-y-8 flex flex-col md:flex-row items-center md:items-start lg:justify-center mt-28 md:mt-2">
                 <PricePlan />
                 <PricePlanSmall />
             </div>

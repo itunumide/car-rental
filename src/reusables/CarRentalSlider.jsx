@@ -18,16 +18,15 @@ const CarRentalSlider = () => {
   };
 
   return (
-    <div className="relative pt-[2rem] md:pt-[4rem] w-[85%] h-[20rem] m-auto z-0">
+    <div className="relative pt-[2rem] md:pt-[4rem] w-[85%] m-auto z-0">
       <style>
         {`
-          /* Styling for the arrows */
           .slick-prev, .slick-next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             background-color: rgba(0, 0, 0, 0.1);
-            color: rgba(255, 208, 8, 1); /* Arrow color */
+            color: rgba(255, 208, 8, 1);
             border: none;
             border-radius: 50%;
             width: 2.5rem;
@@ -46,27 +45,29 @@ const CarRentalSlider = () => {
             right: -3rem;
           }
 
-          /* Hover effect for the arrows */
           .slick-prev:hover, .slick-next:hover {
             background-color: rgba(0, 0, 0, 0.8);
             transition: background-color 0.3s ease;
           }
 
-          /* Arrow icons */
           .slick-prev:before, .slick-next:before {
             font-size: 1.5rem;
-            color: rgba(255, 208, 8, 1); /* Changed arrow color */
+            color: rgba(255, 208, 8, 1);
           }
 
-          /* Force all dots to be black */
           .slick-dots li button:before {
-            color: black !important;  /* Force all dots to be black */
-            opacity: 0.5 !important;  /* Adjust the transparency of inactive dots */
+            color: black !important;
+            opacity: 0.5 !important;
           }
 
-          /* Active dot */
           .slick-dots li.slick-active button:before {
-            opacity: 1 !important;    /* Fully opaque for active dot */
+            opacity: 1 !important;
+          }
+
+          @media (max-width: 768px) {
+            .slick-prev, .slick-next {
+              display: none !important;
+            }
           }
         `}
       </style>
@@ -76,28 +77,27 @@ const CarRentalSlider = () => {
             <img src={car1} alt="Car 1" className="w-[90%]" />
           </div>
           <h1 className="text-black pt-[2rem] text-2xl italic md:text-6xl mb-5">Standard SUV</h1>
-          <p className="w-[38%] m-auto leading-8">A standard SUV offers flexibility, seating capacity and power for cruising around town or your next adventure.</p>
+          <p className="w-[90%] md:w-[38%] m-auto leading-8">A standard SUV offers flexibility, seating capacity and power for cruising around town or your next adventure.</p>
         </div>
         <div>
           <div className="car flex items-center justify-center">
             <img src={car2} alt="Car 2" className="w-[90%]" />
           </div>
           <h1 className="text-black pt-[2rem] text-2xl italic md:text-6xl mb-5">Types of vehicles</h1>
-          <p className="w-[38%] m-auto leading-8">Car rental services primarily serve people who require a temporary vehicle</p>
+          <p className="w-[90%]md: m-auto leading-8">Car rental services primarily serve people who require a temporary vehicle</p>
         </div>
         <div>
           <div className="car flex items-center justify-center">
             <img src={car3} alt="Car 3" className="w-[90%]" />
           </div>
           <h1 className="text-black pt-[2rem] text-2xl italic md:text-6xl mb-5">Car hire</h1>
-          <p className="w-[38%] m-auto leading-8">Alongside the basic rental of a vehicle, car rental agencies typically also offer other products such as insurance</p>
+          <p className="w-[90%]md: m-auto leading-8">Alongside the basic rental of a vehicle, car rental agencies typically also offer other products such as insurance</p>
         </div>
       </Slider>
 
-        <div className="button text-center mt-6">
-            <Button text="View all available vehicles" />
-        </div>
-
+      <div className="button text-center mt-6">
+        <Button text="View available vehicles" />
+      </div>
     </div>
   );
 };

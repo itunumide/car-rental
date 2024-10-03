@@ -6,7 +6,7 @@ import Footerbrand from "../reusables/Footerbrand";
 
 const Footer = () => {
   return (
-    <div className="mt-[10rem]">
+    <div className="mt-[4rem] md:mt-[10rem]">
         <div className="svgtop relative">
             <SvgDesignTop />
         </div>
