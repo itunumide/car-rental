@@ -1,13 +1,64 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CheckoutTextBox from "../../reusables/checkoutreuseable/CheckoutTextBox";
 import PagesHero from "../../reusables/PagesHero";
 import { CheckoutLeft } from "./CheckoutLeft";
 import { CheckoutRight } from "./CheckoutRight";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Checkout = () => {
   const rightSideRef = useRef(null);
   const leftSideRef = useRef(null);
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    companyName: "",
+    country: "",
+    streetAddress: "",
+    streetAddress1: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    phone: "",
+    email: "",
+    additionalInformation: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const url = "https://car-rental-okvm.onrender.com/billing-form";
+    try {
+      const response = await axios.post(url, formData, {
+        headers: {
+          "Content-Type": "application/json",
+          'Authorization': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmY1NWQ2MGNjMzJkODQzZDJjNGQ1ZmMiLCJmaXJzdE5hbWUiOiJBZGUiLCJsYXN0TmFtZSI6Ik1pa2UiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzI3Nzc3MTQ2LCJleHAiOjE3Mjc5NDk5NDZ9.i0fdTLdgH7hY30wId1r8jgbyMcaPjbKu2dr8uef4bp4",
+        },
+      });
+
+      console.log("Billing details submitted successfully:", response.data);
+      alert("Order placed successfully!");
+    } catch (error) {
+      if (error.response) {
+        console.error("Error response", error.response.data);
+        alert(
+          "Error submitting billing details: " + error.response.data.message
+        );
+      } else if (error.request) {
+        console.error("Error request", error.request);
+        alert("No response from the server. Please try again later.");
+      } else {
+        console.error("Error setting up request", error.message);
+        alert("An unexpected error occurred. Please try again.");
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,14 +130,14 @@ const Checkout = () => {
             ref={leftSideRef}
             className="billingDetails  scrollbar-hidden w-full md:w-[53%] sticky md:top-0 overflow-auto"
           >
-            <CheckoutLeft />
+            <CheckoutLeft formData={formData} handleChange={handleChange} />
           </div>
 
           <div
             ref={rightSideRef}
             className=" scrollbar-hidden w-full md:w-[43%] sticky md:top-[-40%] overflow-auto md:max-h-[150vh]"
           >
-            <CheckoutRight />
+            <CheckoutRight handleSubmit={handleSubmit} />
           </div>
         </div>
       </div>
