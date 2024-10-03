@@ -1,39 +1,40 @@
 import Input from "../../reusables/checkoutreuseable/Input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const countries = [
-  { value: "US", label: "United States (US)" },
-  { value: "CA", label: "Canada" },
-  { value: "GB", label: "United Kingdom" },
-  { value: "AU", label: "Australia" },
-  
-];
-const state = [
-  { value: "US", label: "United States (US)" },
-  { value: "CA", label: "Canada" },
-  { value: "GB", label: "United Kingdom" },
-  { value: "AU", label: "Australia" },
-  
-];
-export const CheckoutLeft = () => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    companyname: "",
-    country: "",
-    streetAddress1: "",
-    streetAddress2: "",
-    town: "",
-    state: "",
-    zicode: "",
-    phone: "",
-    email: "",
-    phone: "",
-  });
+export const CheckoutLeft = ({ formData, handleChange }) => {
+  const [countries, setCountries] = useState([]);
+  const [states, setStates] = useState([]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  useEffect(() => {
+    const getCountries = async () => {
+      try {
+        const response = await axios.get(
+          "https://car-rental-okvm.onrender.com/countries"
+        );
+        setCountries(response.data); // Assuming the response is an array of country objects
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    };
+
+    getCountries();
+  }, []);
+
+  const handleCountryChange = async (event) => {
+    const selectedCountryCode = event.target.value; // Get the selected country code
+    handleChange(event); // Update form data
+
+    setStates([]);
+
+    try {
+      const response = await axios.get(
+        `https://car-rental-okvm.onrender.com/countries/${selectedCountryCode}/states`
+      );
+      setStates(response.data); // Assuming the response is an array of state objects
+    } catch (error) {
+      console.error("Error fetching states:", error);
+    }
   };
 
   return (
@@ -44,30 +45,30 @@ export const CheckoutLeft = () => {
       <div className="flex flex-wrap w-full m-auto">
         <div className="sm:flex w-full sm:justify-between ">
           <Input
-            htmlFor="firstname"
+            htmlFor="firstName"
             label="First name"
             isRequired={true}
-            value={formData.firstname}
+            value={formData.firstName}
             onChange={handleChange}
             width="sm:w-[47%]"
           />
           <Input
-            htmlFor="lastname"
+            htmlFor="lastName"
             label="Last name"
             isRequired={true}
-            value={formData.lastname}
+            value={formData.lastName}
             onChange={handleChange}
             width="sm:w-[47%]"
           />
         </div>
         <Input
-          htmlFor="companyname"
+          htmlFor="companyName"
           label="Company name (optional)"
           isRequired={false}
-          value={formData.companyname}
+          value={formData.companyName}
           onChange={handleChange}
         />
-        
+
         <div className="w-full flex flex-col my-[1rem]">
           <label htmlFor="country" className="my-[1rem]">
             Country/Region
@@ -77,44 +78,42 @@ export const CheckoutLeft = () => {
             id="country"
             name="country"
             value={formData.country}
-            onChange={handleChange}
+            onChange={handleCountryChange}
             required
             className="border border-[#dcdcdc] text-[#595959] rounded-3xl h-[3.2rem] p-[.5rem] bg-transparent"
           >
             {countries.map((country) => (
-              <option className="p-2 " key={country.value} value={country.value}>
-                {country.label}
+              <option className="p-2 " key={country.code} value={country.code}>
+                {country.name}
               </option>
             ))}
           </select>
         </div>
 
-
         <Input
-          htmlFor="streetAddress1"
+          htmlFor="streetAddress"
           label="Street address"
           placeholder="House number and street name"
           isRequired={true}
+          value={formData.streetAddress}
+          onChange={handleChange}
+        />
+        <Input
+          htmlFor="streetAddress1"
+          placeholder="Apartment, suite, unit, etc. (optional)"
+          required={false}
           value={formData.streetAddress1}
           onChange={handleChange}
         />
         <Input
-          htmlFor="streetAddress2"
-          placeholder="Apartment, suite, unit, etc. (optional)"
-          required={false}
-          value={formData.streetAddress2}
-          onChange={handleChange}
-        />
-        <Input
-          htmlFor="town"
+          htmlFor="city"
           label="Town/City"
           isRequired={true}
-          value={formData.town}
+          value={formData.city}
           onChange={handleChange}
         />
-       
-    
-         <div className="w-full flex flex-col my-[1rem]">
+
+        <div className="w-full flex flex-col my-[1rem]">
           <label htmlFor="state" className="my-[1rem]">
             state
             <span className="text-red-500 ml-1">*</span>
@@ -127,25 +126,25 @@ export const CheckoutLeft = () => {
             required
             className="border border-[#dcdcdc] text-[#595959] rounded-3xl h-[3.2rem] p-[.5rem] bg-transparent"
           >
-            {countries.map((state) => (
+            {states.map((state) => (
               <option className="p-2 " key={state.value} value={state.value}>
-                {state.label}
+                {state.name}
               </option>
             ))}
           </select>
         </div>
         <Input
-          htmlFor="zipcode"
+          htmlFor="zipCode"
           label="Zipcode"
           type="number"
           isRequired={true}
-          value={formData.zipcode}
+          value={formData.zipCode}
           onChange={handleChange}
         />
         <Input
           htmlFor="phone"
           label="Phone"
-          type="number"
+          type="phone"
           isRequired={true}
           value={formData.phone}
           onChange={handleChange}
@@ -167,8 +166,10 @@ export const CheckoutLeft = () => {
             Order notes(optional)
           </label>
           <textarea
-            name="notes"
+            name="additionalInformation"
             id="notes"
+            value={formData.additionalInformation}
+            onChange={handleChange}
             placeholder="Notes about your order, e.g. special notes for delivery."
             className="border p-[1rem] border-[#dcdcdc] text-[#595959] rounded-3xl h-[10rem] bg-transparent"
           ></textarea>

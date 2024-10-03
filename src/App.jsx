@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./sticky/Header";
 import Home from "./pages/Home";
 import Rent from "./pages/Rent";
@@ -14,12 +15,23 @@ import NotFound from "./pages/NotFound";
 import Footer from "./sticky/Footer";
 import ScrollToTopButton from "./pages/ScrollToTopButton";
 
-
 const App = () => {
+  const location = useLocation();
+  const [showHeaderFooter, setShowHeaderFooter] = useState(true);
+
+  useEffect(() => {
+    // Exclude header and footer for the login and signup pages
+    if (location.pathname === '/login' || location.pathname === '/signup') {
+      setShowHeaderFooter(false);
+    } else {
+      setShowHeaderFooter(true);
+    }
+  }, [location.pathname]);
+
   return (
-    <Router>
-      <Header />
-      <MobileHeader />
+    <>
+      {showHeaderFooter && <Header />}
+      {showHeaderFooter && <MobileHeader />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Rent />} />
@@ -32,9 +44,9 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-     <Footer />
-     <ScrollToTopButton />
-    </Router>
+      {showHeaderFooter && <Footer />}
+      <ScrollToTopButton />
+    </>
   );
 };
 

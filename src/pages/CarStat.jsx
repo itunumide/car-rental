@@ -8,13 +8,13 @@ import SvgDesignPricingB from "../reusables/SvgDesignPricingB"
 
 const CarStat = () => {
   return (
-    <div className="border-2 border-white">
-        <div className="carstat1 absolute w-[40%] mt-[6%]">
+    <div>
+        <div className="carstat1 absolute w-4/5 md:w-[40%] mt-[6%]">
             <img src={carstat1} alt="" />
         </div>
         <SvgDesignPricingT />
 
-        <div className="content w-full pt-[6rem] pb-[16rem] bg-[#1C1601] ">
+        <div className="content w-full pt-[2rem] md:pt-[6rem] pb-[8rem] md:pb-[16rem] bg-[#1C1601] ">
             <div className="service w-[80%] m-auto">
                 <ServiceStat
                 title = "Find your car in one of our"
@@ -23,7 +23,7 @@ const CarStat = () => {
                 />
             </div>
 
-            <div className="stats mt-16 flex items-center justify-center gap-6">
+            <div className="stats mt-16 flex flex-col md:flex-row flex-wrap items-center justify-center gap-6">
               <div className="stats">
                 <Stat 
                 stat = "145"
@@ -57,7 +57,7 @@ const CarStat = () => {
         </div>
 
         <SvgDesignPricingB />
-        <div className="car-pri-b absolute w-[40%] -mt-[30%] ml-[58%]">
+        <div className="car-pri-b absolute w-4/5 md:w-[40%] -mt-[30%] ml-[20%] md:ml-[58%]">
             <img src={carstat2} alt="" />
         </div>
 

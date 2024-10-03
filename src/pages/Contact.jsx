@@ -12,7 +12,6 @@ const Contact = () => {
                     <div className="contact-us bg-gray-300 text-customAccordionColor #F1F1F1 p-4 text-center rounded-3xl text-2xl mb-6 w-[250px]">
                         Contact us today                   
                     </div>
-
                     <div className="get-in-touch w-[370px] text-center italic text-black text-3xl font-bold mb-8">
                         Get in touch with us and ask your <span className='underline text-customYellow'>questions!</span>
                     </div>
