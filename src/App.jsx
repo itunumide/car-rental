@@ -11,15 +11,14 @@ import Checkout from "./pages/checkout/Checkout";
 import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
 import LoginPlaceholder from "./pages/forgotPasswordModals/LoginPlaceholder"
-import UseVerificationFlow from './pages/verifyAccount/UseVerificationFlow';
 import VerificationCode from "./pages/verifyAccount/VerificationCode";
 import VerificationSuccess from "./pages/verifyAccount/VerificationSuccess";
+import VerificationFailure from "./pages/verifyAccount/VerificationFailure";
 import NotFound from "./pages/NotFound";
 import Footer from "./sticky/Footer";
 
 
 const App = () => {
-  const { email, handleVerificationSent, handleVerificationSuccess, handleLoginRedirect } = UseVerificationFlow();
   return (
     <Router>
       <Header />
@@ -36,8 +35,9 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         {/* temporary Login Route */}
         <Route path="/login-placeholder" element={<LoginPlaceholder />} />
-        <Route path="/verify-account" element={<VerificationCode email={email} onVerificationSuccess={handleVerificationSuccess} />} />
-        <Route path="/verification-success" element={<VerificationSuccess onLoginRedirect={handleLoginRedirect} />} />
+        <Route path="/verify-account" element={<VerificationCode />} />
+        <Route path="/verification-success" element={<VerificationSuccess  />} />
+        <Route path="/verification-failure" element={<VerificationFailure  />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
      <Footer />
