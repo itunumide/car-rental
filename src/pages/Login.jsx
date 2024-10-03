@@ -16,7 +16,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen sm:bg-gradient-to-r from-yellow-500 to-yellow-900">
-      <div className= "bg-gradient-to-b from-yellow-500 to-white p-8 rounded-lg shadow-lg w-full sm:w-[70vw] sm:mt-[5rem]  text-center">
+      <div className= "bg-gradient-to-b from-yellow-500 to-white p-8 rounded-2xl shadow-lg w-full sm:w-[500px] sm:mt-[5rem]  text-center">
         <div className="flex flex-col items-start">
           <div className="mb-6">
             <img src={carlogo} alt="car logo" className="mx-auto w-[8rem]" />
