@@ -12,6 +12,10 @@ import Signup from "./pages/SignUp";
 import Checkout from "./pages/checkout/Checkout";
 import MobileHeader from "./sticky/MobileHeader";
 import Cart from "./pages/Cart";
+import LoginPlaceholder from "./pages/forgotPasswordModals/LoginPlaceholder"
+import VerificationCode from "./pages/verifyAccount/VerificationCode";
+import VerificationSuccess from "./pages/verifyAccount/VerificationSuccess";
+import VerificationFailure from "./pages/verifyAccount/VerificationFailure";
 import NotFound from "./pages/NotFound";
 import Footer from "./sticky/Footer";
 import ScrollToTopButton from "./pages/ScrollToTopButton";
@@ -44,6 +48,11 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
+        {/* temporary Login Route */}
+        <Route path="/login-placeholder" element={<LoginPlaceholder />} />
+        <Route path="/verify-account" element={<VerificationCode />} />
+        <Route path="/verification-success" element={<VerificationSuccess  />} />
+        <Route path="/verification-failure" element={<VerificationFailure  />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {showHeaderFooter && <Footer />}
