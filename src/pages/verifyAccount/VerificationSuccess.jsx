@@ -42,7 +42,7 @@ function VerificationSuccess({ isOpen, handleClose  }) {
                     <p className="mb-4">Your account has been successfully verified.</p>
                     <button
                         onClick={handleClose}
-                        className="bg-custom-yellow-500 hover:bg-custom-yellow-400 text-white p-2 rounded w-full border-none"
+                        className="bg-yellow-500 hover:bg-yellow-400 text-white p-2 rounded w-full border-none"
                     >
                         Proceed to Login
                     </button>

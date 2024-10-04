@@ -31,11 +31,11 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
         {/* Top Icon with Two Circles */}
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <div className="absolute rounded-full bg-custom-yellow-100 opacity-50 w-12 h-12"></div> {/* outer circle */}
+            <div className="absolute rounded-full bg-yellow-100 opacity-50 w-12 h-12"></div> {/* outer circle */}
 
-            <div className="relative flex items-center justify-center w-8 h-8 top-2 left-2 bg-custom-yellow-100 rounded-full">
+            <div className="relative flex items-center justify-center w-8 h-8 top-2 left-2 bg-yellow-100 rounded-full">
               {/* Key Icon */}
-              <svg className="h-4 w-4 text-custom-yellow-300" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision"
+              <svg className="h-4 w-4 text-yellow-300" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision"
                 textRendering="geometricPrecision" imageRendering="optimizeQuality"
                 fillRule="evenodd" clipRule="evenodd" viewBox="0 0 512 509.939">
 
@@ -65,7 +65,7 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="mt-1 w-full px-4 py-2 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom-yellow-400 focus:border-transparent placeholder-gray-400"
+              className="mt-1 w-full px-4 py-2 bg-white rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent placeholder-gray-400"
               placeholder="Enter your email"
             />
           </div>
@@ -75,7 +75,7 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
 
           <button
             type="submit"
-            className="w-full bg-custom-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-custom-yellow-400 focus:outline-none"
+            className="w-full bg-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-yellow-400 focus:outline-none"
           >
             Reset password
           </button>

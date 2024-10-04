@@ -20,7 +20,7 @@ const LoginPlaceholder = () => {
             <input
               type="email"
               id="email"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-yellow-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               required
               placeholder="Enter your email"
             />
@@ -30,12 +30,12 @@ const LoginPlaceholder = () => {
             <input
               type="password"
               id="password"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-yellow-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               required
               placeholder="Enter your password"
             />
           </div>
-          <button className="w-full bg-custom-yellow-600 text-white py-2 rounded-lg hover:bg-custom-yellow-700 transition-colors">
+          <button className="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700 transition-colors">
             Sign In
           </button>
         </form>
@@ -43,17 +43,17 @@ const LoginPlaceholder = () => {
         {/* Forgot Password Link */}
         <div className="mt-4">
           <p className="text-sm text-gray-600 mt-4">
-              Forgot your password?
-              {" "}
-              <Link
-                to=""  /* Keep the Link, but don't let it navigate */
-                className="text-custom-yellow-500 hover:underline"
-                onClick={handleForgotPasswordClick}  /* Open modal on click, not change page */
-              >
-                Reset it here
-              </Link>
-            </p>
-          </div>
+            Forgot your password?
+            {" "}
+            <Link
+              to=""  /* Keep the Link, but don't let it navigate */
+              className="text-yellow-500 hover:underline"
+              onClick={handleForgotPasswordClick}  /* Open modal on click, not change page */
+            >
+              Reset it here
+            </Link>
+          </p>
+        </div>
       </div>
       {/* Password Reset Flow (Modal) */}
       {/* Show the modal when `showPasswordReset` is true */}

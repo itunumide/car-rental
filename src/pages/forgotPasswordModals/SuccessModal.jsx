@@ -59,7 +59,7 @@ const SuccessModal = () => {
                 {/* Continue Button */}
                 <button
                     onClick={handleContinue}
-                    className="w-full bg-custom-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-custom-yellow-400 focus:outline-none"
+                    className="w-full bg-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-yellow-400 focus:outline-none"
                 >
                     Continue
                 </button>

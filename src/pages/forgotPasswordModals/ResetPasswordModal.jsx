@@ -27,10 +27,10 @@ const ResetPasswordModal = ({ onNext }) => {
                     <div className="flex justify-center mb-6">
                         <div className="relative">
                             {/* Outer circle */}
-                            <div className="absolute w-12 h-12 bg-custom-yellow-100 rounded-full opacity-50"></div>
+                            <div className="absolute w-12 h-12 bg-yellow-100 rounded-full opacity-50"></div>
                             {/* Inner circle */}
-                            <div className="relative w-8 h-8 top-2 left-2 bg-custom-yellow-100 rounded-full flex items-center justify-center">
-                                <svg className="h-4 w-4 text-custom-yellow-300" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision"
+                            <div className="relative w-8 h-8 top-2 left-2 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <svg className="h-4 w-4 text-yellow-300" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision"
                                     textRendering="geometricPrecision" imageRendering="optimizeQuality"
                                     fillRule="evenodd" clipRule="evenodd" viewBox="0 0 512 509.939">
 
@@ -64,7 +64,7 @@ const ResetPasswordModal = ({ onNext }) => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
-                                className="w-full mt-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom-yellow-500 focus:border-transparent"
+                                className="w-full mt-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                             />
                             <p className="text-xs text-gray-500 mt-1">Must be at least 8 characters.</p>
                         </div>
@@ -83,7 +83,7 @@ const ResetPasswordModal = ({ onNext }) => {
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                 required
-                                className="w-full mt-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom-yellow-500 focus:border-transparent"
+                                className="w-full mt-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                             />
                         </div>
                         {/* Display Error if passwords don't match */}
@@ -92,7 +92,7 @@ const ResetPasswordModal = ({ onNext }) => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="w-full bg-custom-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-custom-yellow-400 focus:outline-none border-none"
+                            className="w-full bg-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-yellow-400 focus:outline-none border-none"
                         >
                             Reset password
                         </button>
