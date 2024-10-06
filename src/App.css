@@ -4,3 +4,17 @@
   padding: 2rem;
   text-align: center;
 } */
+
+.rotate-svg {
+  animation: rotate 3s linear infinite; /* Rotate over 3 seconds continuously */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Initial state */
+  }
+  to {
+    transform: rotate(360deg); /* Final state after rotation */
+  }
+}
+
