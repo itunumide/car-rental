@@ -14,7 +14,7 @@ const PagesHero = () => {
         </div>  
       </div>
     </div>
-  )
+  );
 }
 
-export default PagesHero
+export default PagesHero;
