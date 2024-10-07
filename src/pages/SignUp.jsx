@@ -7,7 +7,7 @@ const Signup = () => {
       <div>
         <div className="bg-gradient-to-b from-yellow-500 to-white w-full lg:w-full shadow-white h-full p-5 ">
           <div className="flex flex-col gap-3">
-            <Link to="/login">
+            <Link to="/">
               <img className="w-[8rem]" src={logo} alt=""></img>
             </Link>
             <h2 className=" text-2xl  font-bold text-black-500 ">
