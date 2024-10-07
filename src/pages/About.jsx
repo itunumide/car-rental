@@ -1,17 +1,14 @@
-import AboutSection1 from "../components/AboutSection1";
-import ExpertTeam from "../components/ExpertTeam";
-import MoreInfo from "../components/MoreInfo";
-import PagesHero from "../reusables/PagesHero";
+import PagesHero from "../reusables/PagesHero"
+
 
 const About = () => {
   return (
-    <>
+    <div>
       <PagesHero />
-      <AboutSection1 />
-      <ExpertTeam />
-      <MoreInfo />
-    </>
-  );
-};
+      
+      <h1>About</h1>
+    </div>
+  )
+}
 
-export default About;
+export default About
