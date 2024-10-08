@@ -6,10 +6,10 @@ import car4 from "../assets/car-4.png"
 import cart from "../assets/cart-icon.png"
 import CartProduct from "../reusables/cart/CartProduct"
 import { useState } from "react"
+import Button from "../reusables/Button"
 
 const Cart = () => {
     const [count, setCount] =useState(1)
-
     const increament = () => {
       setCount(count + 1);
     };
@@ -100,10 +100,10 @@ const Cart = () => {
             <td className=" whitespace-nowrap p-4 "colSpan="6"> 
               <input id="apply"  placeholder="Coupon Code"  className="border-2 outline-amber-500 px-10  py-3 text-base text-gray-400 pl-3 pr-20 rounded-3xl text-left ">
               </input>
-              <button id="apply" className="border-2 outline-none   px-10 text-center bg-amber-400 py-3 text-base font-bold hover:bg-white hover:border-yellow-500 hover:text-yellow-500 rounded-3xl ">
+              <button id="apply" className="border-2 outline-none   px-10 text-center bg-[#FFCA08] py-3 text-base font-bold hover:bg-white hover:border-yellow-500 hover:text-yellow-500 rounded-3xl ">
                 Apply Coupon
               </button>
-              <button id="shopping" className="border-2 px-10 bg-amber-400 float-right py-3 hover:border-yellow-500 hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
+              <button id="shopping" className="border-2 px-10 bg-[#FFCA08] float-right py-3 hover:border-yellow-500 hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
                 Continue Shopping
               </button>
             
@@ -118,7 +118,7 @@ const Cart = () => {
         <div id="cart-totals" className=" border-0 w-5/6 ">
         <h2 className=" bottom-0 py-4 pl-8 w-11/12 text-left text-lg lg:text-2xl font-bold rounded-full ml-5 bg-black text-amber-400">You may be interested in ...</h2>
         <div className="flex my-10 gap-2 px-5 w-full justify-around">
-          <CartProduct pic={car4} text="Add to cart"/>
+          <CartProduct pic={car3} text="Add to cart"/>
           <CartProduct pic={car2} text="Add to cart"/>
         </div>
         </div>
@@ -137,13 +137,13 @@ const Cart = () => {
           </tr>
           </tbody>
         </table>
-        <button className="border-2 px-10 bg-amber-400 mr-14 self-end w-5/6 mb-8 md:w-64  float-right py-3 hover:border-yellow-500  hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
-                Proceed to Checkout
-              </button>
+        <div className=" px-10 self-end mb-8  md:w-auto sm:w-auto float-right py-3  ">
+                <Button text="Proceed to Checkout"/>
+              </div>
         </div>
       </div>
       </div>
-      <div>
+      <div className="">
         <div className="flex flex-col items-center justify-center mt-24">
           <img className="h-28 sm:h-36 md:h-44 lg:h-52 mb-14  saturate-50" src={cart}/>
           <h1 className="text-xl text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold">Looks like your cart is empty!</h1>
@@ -158,9 +158,7 @@ const Cart = () => {
           <CartProduct pic={car3} text="Add to cart"/>
           <CartProduct pic={car4} text="Add to cart"/>
         </div>
-        <button  className="border-2 px-10 bg-amber-400 place-center py-3 hover:border-yellow-500 hover:text-yellow-500 hover:bg-white text-base font-bold  rounded-3xl ">
-                Return to shop
-              </button>
+              <Button text="Return to shop"/>
         </div>
         
         </div>
