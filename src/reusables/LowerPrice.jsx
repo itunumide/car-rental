@@ -8,14 +8,14 @@ import PricePlanSmall from "./PricePlanSmall"
 
 const LowerPrice = () => {
   return (
-    <div className="mt-[10rem]">
+    <div className="mt-[5rem]">
         <div className="pricescar absolute w-[85%] md:w-[40%] mt-[6%]">
             <img src={pricescar} alt="" />
         </div>
         <SvgDesignPricingT />
         
-        <div className="content px-[8%] w-full border-2 border-white py-[8rem] bg-[#1C1601] flex flex-col lg:flex-row justify-between">
-            <div className="left w-[100%] md:w-3/6 border-2 border-white">
+        <div className="content px-[8%] w-full py-[8rem] bg-[#1C1601] flex flex-col lg:flex-row justify-between">
+            <div className="left w-[100%] md:w-3/6">
                 <ServicePricing
                 titlebg = "#221B01"
                 titlecolor = "#cecece"
@@ -23,7 +23,7 @@ const LowerPrice = () => {
                 />
             </div>
 
-            <div className="price-plan space-y-8 flex flex-col md:flex-row items-center lg:justify-center mt-10">
+            <div className="price-plan space-y-8 flex flex-col md:flex-row items-center md:items-start lg:justify-center mt-28 md:mt-2">
                 <PricePlan />
                 <PricePlanSmall />
             </div>
