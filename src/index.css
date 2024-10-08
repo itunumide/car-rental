@@ -28,7 +28,7 @@ a {
   #whole-table{
     margin-top: 30px;
   }
- thead{
+ .thead{
    display: none;
  }
  .large-scrn{
@@ -40,10 +40,13 @@ a {
  th, td {
   text-align: left; /* Align text to the left */
  }
+#table{
+
+  width: 92%;
+}
  .coupon td{
   display:flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 .cart-total{
 display: flex;
@@ -56,6 +59,9 @@ button{
 }
 }
 #shopping{
+  width: 100%;
+}
+#apply{
   width: 100%;
 }
 #cart-totals{
@@ -77,9 +83,9 @@ tfoot td{
   height: 160px;
 }
  }
- @media screen and (min-width:480.01px)and (max-width:800px) {
+ @media screen and (min-width:480.01px)and (max-width:810px) {
   
-  thead{
+  .thead{
     display: none;
   }
   #table tr{
