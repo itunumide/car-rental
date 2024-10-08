@@ -7,6 +7,7 @@ import cart from "../assets/cart-icon.png"
 import CartProduct from "../reusables/cart/CartProduct"
 import { useState } from "react"
 import Button from "../reusables/Button"
+import { Await } from "react-router-dom"
 
 const Cart = () => {
     const [count, setCount] =useState(1)
@@ -18,7 +19,7 @@ const Cart = () => {
       setCount(count - 1);
       }
     };
-    
+ 
 
   return (
     <div>
