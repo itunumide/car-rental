@@ -8,9 +8,30 @@ import CartProduct from "../reusables/cart/CartProduct"
 import { useState } from "react"
 import Button from "../reusables/Button"
 import { Await } from "react-router-dom"
+import axios from "axios"
 
 const Cart = () => {
+  // const menu =()=>{
+  //   var menuState = document.getElementById('addcart')
+  //   var style = window.getComputedStyle(menuState);
+  //   console.log(style.display)
+  //   if (style.display=="block"){
+  //     menuState.style.display = "hidden"
+  //   }else{
+  //     menuState.style.display = "block"
+  //    var menuState = document.getElementById('empty')
+  //   var style = window.getComputedStyle(menuState);
+  //   console.log(style.display)
+  //   if (style.display==="hidden"){
+  //     menuState.style.display = "hidden"
+  //   }else{
+  //     menuState.style.display = "hidden"
+  //   }
+  //   }
+  // }
+
     const [count, setCount] =useState(1)
+    const [addCart, setAddCart] =useState("")
     const increament = () => {
       setCount(count + 1);
     };
@@ -19,24 +40,31 @@ const Cart = () => {
       setCount(count - 1);
       }
     };
- 
-
+   
+   const getData = async () => {
+      await axios.get("https://car-rental-okvm.onrender.com/cart/add/${userId}/${carId}").then((response)=>{
+          setAddCart(response.data);
+      });
+   }
+    console.log(addCart);
+    
   return (
+
     <div>
       <PagesHero />
-      <div className="">
+      <div id="addcart" className="">
       <div id="shopping-cart" className=" mb-20 ">
     <ul className="list-none flex items-center justify-center gap-10 mt-28 text-sm md:text-2xl border-red-400 lg:text-3xl">
       <li className=" flex items-center gap-2">
-        <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">1</span> Shopping Cart
+        <span className="bg-[#FFCA08] text-sm px-2 py-1 rounded-full">1</span> Shopping Cart
       </li> 
       <i className="ri-arrow-right-line opacity-25"></i>
       <li className=" flex items-center gap-2 opacity-25">
-        <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">2</span> Checkout Details
+        <span className="bg-[#FFCA08] text-sm px-2 py-1 rounded-full">2</span> Checkout Details
       </li>
       <i className="ri-arrow-right-line opacity-25"></i>
       <li className=" flex items-center gap-2 opacity-25">
-        <span className="bg-yellow-400 text-sm px-2 py-1 rounded-full">3</span>Order Complete
+        <span className="bg-[#FFCA08] text-sm px-2 py-1 rounded-full">3</span>Order Complete
       </li>
     </ul>
     </div>
@@ -117,7 +145,7 @@ const Cart = () => {
         
       <div id="cart-totals" className="flex flex-col-reverse w-11/12 md:flex-row sm:justify-center items-start ml-5 justify-around mb-2">
         <div id="cart-totals" className=" border-0 w-5/6 ">
-        <h2 className=" bottom-0 py-4 pl-8 w-11/12 text-left text-lg lg:text-2xl font-bold rounded-full ml-5 bg-black text-amber-400">You may be interested in ...</h2>
+        <h2 className=" bottom-0 py-4 pl-8 w-11/12 text-left text-lg lg:text-2xl font-bold rounded-full ml-5 bg-black text-[#FFCA08]">You may be interested in ...</h2>
         <div className="flex my-10 gap-2 px-5 w-full justify-around">
           <CartProduct pic={car3} text="Add to cart"/>
           <CartProduct pic={car2} text="Add to cart"/>
@@ -125,7 +153,7 @@ const Cart = () => {
         </div>
         <div id="cart-totals" className="cart-total flex flex-col w-5/6  justify-center items-center">
           <div className=" w-11/12">
-        <h2 className="bottom-0 py-4 pl-8  text-left text-2xl font-bold rounded-full bg-black text-amber-400">Cart&nbsp;totals</h2></div>
+        <h2 className="bottom-0 py-4 pl-8  text-left text-2xl font-bold rounded-full bg-black text-[#FFCA08]">Cart&nbsp;totals</h2></div>
         <table  className="w-10/12 my-10  border-2 border-b">
         <tbody>
           <tr className="border-b text-left">
@@ -144,28 +172,30 @@ const Cart = () => {
         </div>
       </div>
       </div>
-      <div className="">
+      <div id="" className="">
         <div className="flex flex-col items-center justify-center mt-24">
           <img className="h-28 sm:h-36 md:h-44 lg:h-52 mb-14  saturate-50" src={cart}/>
           <h1 className="text-xl text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold">Looks like your cart is empty!</h1>
           <h5 className="pt-5 text-neutral-500 text-lg">Time to start your shopping</h5>
         </div>
-        <div>
+        <div id="empty">
         <div  className=" border-0 flex flex-col justify-center items-center mt-20">
-        <h2 className=" bottom-0 py-4 pl-8 w-11/12 text-left text-lg lg:text-2xl font-bold rounded-full ml-5 bg-black text-amber-400">You may be interested in ...</h2>
+        <h2 className=" bottom-0 py-4 pl-8 w-11/12 text-left text-lg lg:text-2xl font-bold rounded-full ml-5 bg-black text-[#FFCA08]">You may be interested in ...</h2>
         <div className="grid grid-cols-2 gap-2 md:flex lg:flex my-10 lg:gap-2 px-5 w-10/12 justify-around">
-          <CartProduct pic={car1} text="Add to cart"/>
+          <CartProduct pic={car1} text="Add to cart" />
           <CartProduct pic={car2} text="Add to cart"/>
           <CartProduct pic={car3} text="Add to cart"/>
           <CartProduct pic={car4} text="Add to cart"/>
         </div>
-              <Button text="Return to shop"/>
+              
         </div>
         
         </div>
         
       </div>
-    </div>
+    
+      </div>
+    
   )
 }
 
