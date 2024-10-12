@@ -42,7 +42,9 @@ const HeroTextSlider = () => {
 
             Best cars to make <br /> Your <span className="text-[#FFCA08]">drive easy</span>
           </h1>
-          <Button text="Best Offers" />
+          <div className="slider-button mb-2">
+            <Button text="Best Offers" />
+          </div>
         </div>
       </Slider>
     </div>
