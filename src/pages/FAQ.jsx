@@ -73,25 +73,25 @@ const FAQs = () => {
               <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center text-customAccordionColor'>
                 <div className="name-email flex w-[350px] justify-between 500px:flex 500px:flex-col 500px:leading-4">
                   <div className="name text-sm">
-                    <label>Your Name (*)</label> <br />
+                    <label className='text-lightGray'>Your Name (*)</label> <br />
                     <input 
                       type="text" 
                       name="name"
                       value={formValues.name}
                       onChange={handleInputChange}
-                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px]'
+                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1'
                     />
                     {errors.name && <p className="text-red-500">{errors.name}</p>}
                   </div>
 
                   <div className="email text-sm leading-loose 500px:mt-4">
-                    <label>Your Email (*)</label> <br />
+                    <label className='text-lightGray'>Your Email (*)</label> <br />
                     <input 
                       type="text" 
                       name="email"
                       value={formValues.email}
                       onChange={handleInputChange}
-                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px]' 
+                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1' 
                     />
                     {errors.email && <p className="text-red-500">{errors.email}</p>}
                   </div>                  
@@ -99,20 +99,20 @@ const FAQs = () => {
                 <br />
 
                 <div className="subject flex flex-col leading-loose">
-                  <label>Subject</label>
+                  <label className='text-lightGray'>Subject</label>
                   <input 
                     type="text" 
                     name="subject"
                     value={formValues.subject}
                     onChange={handleInputChange}
-                    className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px]' 
+                    className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1' 
                   />
                 </div>
                 <br />
 
                 <div className="department flex flex-col leading-loose mx-2">
-                  <label>Department</label>
-                  <select name="" id="" className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px]'>
+                  <label className='text-lightGray'>Department</label>
+                  <select name="" id="" className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1'>
                     <option value="department">Business Department</option>
                     <option value="department">Personal Department</option>
                     <option value="department">Support Department</option>
@@ -123,17 +123,17 @@ const FAQs = () => {
                 <br />
 
                 <div className="question leading-loose">
-                  <label>Your Question</label> <br />
+                  <label className='text-lightGray'>Your Question</label> <br />
                   <textarea 
                     name="question" 
                     rows="7" 
                     cols="45" 
                     value={formValues.question}
                     onChange={handleInputChange}
-                    className='rounded-2xl'
+                    className='rounded-2xl mt-1'
                   ></textarea>
                   <br />
-                  <button type="submit" className='bg-customYellow w-[55px] h-7 rounded-3xl font-bold'>Ask</button>
+                  <button type="submit" className='bg-customYellow text-white w-[75px] h-7 rounded-3xl font-bold text-center mb-4'>Ask</button>
                 </div>
               </form>
             </div>

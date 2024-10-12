@@ -12,6 +12,7 @@ export default {
         customP: '#aaaaaa',
         customAccordionColor: '#5b5748',
         customGray: '#1e1e1e',
+        lightGray: '#E4E0E1',
         formBg: '#1C1601',
         formLabel: '#858480'
       },

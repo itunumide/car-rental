@@ -85,7 +85,7 @@ const Contact = () => {
                         <form onSubmit={handleSubmit} autoComplete='on' className='flex flex-col justify-center items-center text-formLabel m-10'>
                             <div className="name-and-email flex flex-col md:flex-row md:justify-between w-full">
                                 <div className="name text-sm leading-loose w-full md:w-[48%]">
-                                    <label>Your Name (*)</label> <br />
+                                    <label className='text-lightGray'>Your Name (*)</label> <br />
                                     <input 
                                         type="text" 
                                         name="name" 
@@ -97,7 +97,7 @@ const Contact = () => {
                                 </div>
 
                                 <div className="email text-sm leading-loose w-full md:w-[48%] mt-5 md:mt-0">
-                                    <label>Your Email (*)</label> <br />
+                                    <label className='text-lightGray'>Your Email (*)</label> <br />
                                         <input 
                                             type="text" 
                                             name="email"
@@ -112,7 +112,7 @@ const Contact = () => {
 
                             <div className="phone-and-department flex flex-col md:flex-row md:justify-between w-full">
                                 <div className="phone text-sm leading-loose w-full md:w-[48%]">
-                                    <label>Phone</label> <br />
+                                    <label className='text-lightGray'>Phone</label> <br />
                                     <input 
                                         type="text" 
                                         name="phone" 
@@ -124,8 +124,8 @@ const Contact = () => {
                                 </div>
 
                                 <div className="department text-sm leading-loose w-full md:w-[48%] mt-5 md:mt-0">
-                                    <label>Department</label> <br />
-                                    <select name="" id="" className='w-full h-[45px] rounded-2xl mt-2'>
+                                    <label className='text-lightGray'>Department</label> <br />
+                                    <select name="" id="" className='w-full h-[45px] rounded-2xl mt-2 p-2'>
                                         <option>Business Department</option>
                                         <option>Personal Department</option>
                                         <option>Support Department</option>
@@ -136,7 +136,7 @@ const Contact = () => {
                             <br />
 
                             <div className="question leading-loose w-full">
-                                <label>Your Question</label> <br />
+                                <label className='text-lightGray'>Your Question</label> <br />
                                 <textarea 
                                     name="question" 
                                     rows="7" 
@@ -163,4 +163,6 @@ const Contact = () => {
 }
 
 export default Contact;
+
+
 
