@@ -82,7 +82,7 @@ const Contact = () => {
                     </div>
 
                     <div className='form-container bg-formBg w-full rounded-2xl'>
-                        <form onSubmit={handleSubmit} autoComplete='on' className='flex flex-col justify-center items-center text-customAccordionColor m-10'>
+                        <form onSubmit={handleSubmit} autoComplete='on' className='flex flex-col justify-center items-center text-formLabel m-10'>
                             <div className="name-and-email flex flex-col md:flex-row md:justify-between w-full">
                                 <div className="name text-sm leading-loose w-full md:w-[48%]">
                                     <label>Your Name (*)</label> <br />
@@ -91,7 +91,7 @@ const Contact = () => {
                                         name="name" 
                                         value={formData.name}
                                         onChange={handleChange} 
-                                        className='w-full h-[45px] rounded-2xl p-4' 
+                                        className='w-full h-[45px] rounded-2xl p-4 mt-2' 
                                     />
                                     {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                                 </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange} 
-                                            className='w-full h-[45px] rounded-2xl p-4' 
+                                            className='w-full h-[45px] rounded-2xl p-4 mt-2' 
                                         />
                                         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                                 </div>
@@ -118,14 +118,14 @@ const Contact = () => {
                                         name="phone" 
                                         value={formData.phone}
                                         onChange={handleChange} 
-                                        className='w-full h-[45px] rounded-2xl p-4' 
+                                        className='w-full h-[45px] rounded-2xl p-4 mt-2' 
                                     />
                                     {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                                 </div>
 
                                 <div className="department text-sm leading-loose w-full md:w-[48%] mt-5 md:mt-0">
                                     <label>Department</label> <br />
-                                    <select name="" id="" className='w-full h-[45px] rounded-2xl'>
+                                    <select name="" id="" className='w-full h-[45px] rounded-2xl mt-2'>
                                         <option>Business Department</option>
                                         <option>Personal Department</option>
                                         <option>Support Department</option>
@@ -142,7 +142,7 @@ const Contact = () => {
                                     rows="7" 
                                     value={formData.question}
                                     onChange={handleChange} 
-                                    className='w-full rounded-2xl p-4'>
+                                    className='w-full rounded-2xl p-4 mt-2'>
                                 </textarea>
                                 {errors.question && <p className="text-red-500 text-xs mt-1">{errors.question}</p>}
                             </div>

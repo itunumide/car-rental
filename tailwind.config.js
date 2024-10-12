@@ -12,6 +12,7 @@ export default {
         customAccordionColor: '#5b5748',
         customGray: '#1e1e1e',
         formBg: '#1C1601',
+        formLabel: '#858480'
       },
 
       screens: {

@@ -70,7 +70,7 @@ const FAQs = () => {
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center text-customAccordionColor'>
+              <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center text-formLabel'>
                 <div className="name-email flex w-[350px] justify-between 500px:flex 500px:flex-col 500px:leading-4">
                   <div className="name text-sm">
                     <label>Your Name (*)</label> <br />
@@ -79,7 +79,7 @@ const FAQs = () => {
                       name="name"
                       value={formValues.name}
                       onChange={handleInputChange}
-                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] px-4'
+                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] px-4 mt-2'
                     />
                     {errors.name && <p className="text-red-500">{errors.name}</p>}
                   </div>
@@ -91,7 +91,7 @@ const FAQs = () => {
                       name="email"
                       value={formValues.email}
                       onChange={handleInputChange}
-                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] px-4' 
+                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] px-4 mt-2' 
                     />
                     {errors.email && <p className="text-red-500">{errors.email}</p>}
                   </div>                  
@@ -105,14 +105,14 @@ const FAQs = () => {
                     name="subject"
                     value={formValues.subject}
                     onChange={handleInputChange}
-                    className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] px-4' 
+                    className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] px-4 mt-2' 
                   />
                 </div>
                 <br />
 
                 <div className="department flex flex-col leading-loose">
                   <label>Department</label>
-                  <select name="" id="" className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px]'>
+                  <select name="" id="" className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-2'>
                     <option value="department">Business Department</option>
                     <option value="department">Personal Department</option>
                     <option value="department">Support Department</option>
@@ -130,18 +130,18 @@ const FAQs = () => {
                     cols="45" 
                     value={formValues.question}
                     onChange={handleInputChange}
-                    className='rounded-2xl px-4 mb-4'
+                    className='rounded-2xl px-4 mb-4 mt-2'
                   ></textarea>
                   <br />
-                  <button type="submit" className='bg-customYellow w-[55px] h-7 rounded-3xl font-bold mb-5'>Ask</button>
+                  <button type="submit" className='bg-customYellow w-[120px] h-7 text-2xl rounded-3xl font-bold mb-5 p-6 flex items-center justify-center'>Ask</button>
                 </div>
               </form>
             </div>
           </div>
 
-          <div className="RHS width-[60%] ml-10 500px:ml-0 500px:w-full 500px:text-center 500px:mb-5">
+          <div className="RHS width-[60%] ml-10 mb-[200px] 500px:ml-0 500px:w-full 500px:text-center 500px:mb-5">
             <div className="top-right mb-10">
-              <h1 className='text-black italic text-3xl font-bold mb-6 500px:text-base'>Do you have any <span className='bg-customYellow underline'>Questions?</span></h1>
+              <h1 className='text-black italic text-5xl font-bold mb-6 500px:text-base'>Do you have any <span className='bg-customYellow underline'>Questions?</span></h1>
               <p className='text-customP mb-4 text-xl 500px:m-[18px] 500px:text-[12px] leading-tight'>
                 Please read questions below and if you can not find your answer, please send us your question, we will answer you as soon as possible
               </p>
