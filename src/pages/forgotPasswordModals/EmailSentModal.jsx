@@ -18,7 +18,7 @@ const EmailSentModal = ({ email, onResend }) => {
   }
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50 text-center">
-      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+      <div className="bg-white p-6 rounded-lg shadow-xl w-11/12 max-w-md mx-auto mt-12">
 
         {/* Top Icon: Two circles, outer with lighter purple, inner with darker */}
         <div className="flex justify-center mb-6">
@@ -35,7 +35,7 @@ const EmailSentModal = ({ email, onResend }) => {
           </div>
         </div>
         {/* Main heading */}
-        <h2 className="text-2xl font-semibold mb-4">Check your email</h2>
+        <h2 className="text-center text-2xl font-semibold mb-4">Check your email</h2>
         <p className="text-sm text-gray-500 mb-4">
           We've sent a password reset link to <strong>{email}</strong>. <br />
           Please check your email to proceed.
@@ -61,7 +61,7 @@ const EmailSentModal = ({ email, onResend }) => {
 
 
         {/* Back to login */}
-        <div className="mt-6">
+        <div className="text-center mt-6">
           <Link to="/login" className="text-sm text-gray-600 inline-flex items-center">
             {/* Arrow with no underline on hover */}
             <span className="mr-2 hover:no-underline">&larr;</span>

@@ -23,10 +23,10 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50">
 
       {/* Modal Content */}
-      <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+      <div className="bg-white p-6 rounded-lg shadow-xl w-11/12 max-w-md mx-auto mt-12">
 
         {/* Top Icon with Two Circles */}
         <div className="flex justify-center mb-6">
@@ -46,7 +46,7 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
         </div>
 
         {/* Main heading */}
-        <h2 className="text-2xl font-semibold mb-2">Forgot password?</h2>
+        <h2 className="text-2xl text-center font-semibold mb-2">Forgot password?</h2>
 
         {/* Description */}
         <p className="text-gray-500 mb-6">
@@ -75,14 +75,14 @@ const RequestResetModal = ({ onSubmitSuccess }) => {
 
           <button
             type="submit"
-            className="w-full bg-yellow-500 text-white py-2 rounded-lg transition duration-200 hover:bg-yellow-400 focus:outline-none"
+            className="w-full bg-yellow-400 text-white py-2 rounded-lg transition duration-200 hover:bg-yellow-300 focus:outline-none"
           >
             Reset password
           </button>
         </form>
 
         {/* Back to login */}
-        <div className="mt-6">
+        <div className="mt-6 text-center">
           <Link to="/login" className="text-sm text-gray-600 inline-flex items-center">
             {/* Arrow with no underline on hover */}
             <span className="mr-2 hover:no-underline">&larr;</span>

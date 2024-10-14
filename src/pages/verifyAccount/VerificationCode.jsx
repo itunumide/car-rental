@@ -65,9 +65,6 @@ function VerificationCode({ email }) {
     }
   };
 
-  
-  
-
   const handleCloseSuccess = () => {
     setSuccessModalOpen(false);
     // Redirect to login or desired route
@@ -76,10 +73,10 @@ function VerificationCode({ email }) {
   const handleCloseFailure = () => {
     setFailureModalOpen(false);
   };
-
+  // bg-gradient-to-r from-white to-yellow-300
 return (
-  <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white">
-    <div className="relative bg-gradient-to-r from-white to-yellow-300 px-8 py-16 rounded-lg shadow-lg w-full max-w-lg text-center">
+  <div className="flex flex-col items-center text-center justify-center min-h-screen p-6 bg-gradient-to-r from-yellow-300 to-yellow-500">
+    {/* <div className="relative bg-gradient-to-b from-yellow-500 to-white px-8 py-16 rounded-lg shadow-lg w-full max-w-lg text-center"> */}
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <div className='flex items-center justify-center pb-2'>
           <svg className="h-8 w-8 text-yellow-400" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.879px" height="88.855px" viewBox="0 0 122.879 88.855" enableBackground="new 0 0 122.879 88.855" xmlSpace="preserve">
@@ -101,7 +98,7 @@ return (
                 value={digit}
                 onChange={(e) => handleChange(e, index)}
                 maxLength="1"
-                className="border border-gray-300 text-center p-2 mx-1 w-12 h-12 text-lg rounded"
+                className="border border-gray-300 text-center p-2 mx-1 w-8 h-8 lg:h-12  lg:w-12 text-lg rounded"
                 onKeyDown={handleKeyDown}
               />
             ))}
@@ -115,7 +112,7 @@ return (
           </button>
 
           {/* Didn't receive the email section */}
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 sm:text-xs lg:text-sm text-gray-500">
             Didn’t receive the email?{' '}
             <span
               className="text-yellow-500 hover:underline cursor-pointer"
@@ -136,7 +133,7 @@ return (
           handleClose={handleCloseFailure}
         />
       </div>
-    </div>
+    {/* </div> */}
   </div>
 );
 }
