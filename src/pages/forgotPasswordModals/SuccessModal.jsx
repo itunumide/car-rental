@@ -7,12 +7,12 @@ const SuccessModal = () => {
   // Handle the "Continue" button click to navigate to the /login-placeholder
   const handleContinue = () => {
     // Or you can navigate to any other page, like the login page or home
-    navigate('/login-placeholder'); // Navigate to the dashboard route after successful password reset
+    navigate('/login'); // Navigate to the dashboard route after successful password reset
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50">
-       <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur flex justify-center items-center z-50">
+       <div className="bg-white p-6 rounded-lg shadow-xl w-11/12 max-w-md mx-auto mt-12">
             <div className="w-full max-w-md mx-auto text-center">
 
                 {/* Top Icon */}
