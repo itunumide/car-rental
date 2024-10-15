@@ -5,6 +5,7 @@ import { CheckoutLeft } from "./CheckoutLeft";
 import { CheckoutRight } from "./CheckoutRight";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { getToken } from '../../utils/Token.js';
 
 const Checkout = () => {
   const rightSideRef = useRef(null);
@@ -33,12 +34,17 @@ const Checkout = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!formData.firstName || !formData.email) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
     const url = "https://car-rental-okvm.onrender.com/billing-form";
     try {
       const response = await axios.post(url, formData, {
         headers: {
           "Content-Type": "application/json",
-          'Authorization': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmY1NWQ2MGNjMzJkODQzZDJjNGQ1ZmMiLCJmaXJzdE5hbWUiOiJBZGUiLCJsYXN0TmFtZSI6Ik1pa2UiLCJlbWFpbCI6ImFkZWt1bmxlbWljaGFlbDEzMTlAZ21haWwuY29tIiwiaWF0IjoxNzI3Nzc3MTQ2LCJleHAiOjE3Mjc5NDk5NDZ9.i0fdTLdgH7hY30wId1r8jgbyMcaPjbKu2dr8uef4bp4",
+          Authorization: `Bearer ${getToken()}`,
         },
       });
 
