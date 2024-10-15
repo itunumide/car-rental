@@ -23,7 +23,7 @@ const Testimonial = () => {
                 <div className="leftb w-20 h-20 rounded-[50%] ml-20 bg-cover bg-center relative -top-8" style={{backgroundImage: `url(${jenny})`}}>
                     {/* <img src= {jenny} alt="" /> */}
                 </div>
-                <div className="rightb relative -top-12  text-center">
+                <div className="rightb relative md:-top-1 -top-12  text-center">
                     <div className="top">
                         <h1 className="font-bold text-[1.1rem]">Jennifer Olayiwola</h1>
                     </div>
