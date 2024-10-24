@@ -1,7 +1,6 @@
-
 import { useState } from "react"
-import logo from "../assets/car-rental-logo.png"
-
+import logo from "../assets/car-rental-logo.png";
+import { Link } from "react-router-dom";
 
 const Signup = () =>  {
 const [email, setEmail] = useState([""])
@@ -31,9 +30,11 @@ setConfirmPassword('')
         
         <div  className="block justify-center items-center sm:p-20 lg:flex md:flex sm:flex h-full sm:bg-gradient-to-r from-yellow-500 to-yellow-900">
      <div>
-    <div className="bg-gradient-to-b from-yellow-500 to-white w-full lg:w-full bg-blue-100  shadow-white h-full p-5 rounded-2xl ">
-  <div className="flex flex-col gap-3">  
+    <div className="bg-gradient-to-b from-yellow-500 to-white w-full lg:w-full bg-blue-100  shadow-white h-full p-8 rounded-2xl ">
+  <div className="flex flex-col gap-3"> 
+<Link to="/">
   <img  className=" mt-2 w-[8rem]"  src={logo} alt="car rental"></img>
+</Link>
   <h2 className=" text-2xl  font-bold  text-black-500 ">Sign up</h2>
   <p className="text-gray-500 mb-6">Create Car Rental account</p>
    </div>
@@ -105,12 +106,24 @@ setConfirmPassword('')
 
 <div className="flex  items-center justify-between mt-6 gap-4 rent flex-col lg:flex-row " >
  <small className=" flex justify-between gap-1 ">
-  <p className="text">Already have a Car Rental account? <button type="submit"   className="text-sm text-yellow-600">Log in!</button> </p>
+  <p className="text">Already have a Car Rental account? {""} <a href="/login" className="text-sm text-yellow-600">Log in!</a> {""}  </p>
    </small>
      </div>
 
  <p className="mt-10 text-left text-center">By proceeding, you agree to the<a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
 
+
+ <div className="mt-8 flex justify-between w-[200px] text-sm text-gray-500">
+          <a href="#" className="hover:underline">
+            Help
+          </a>
+          <a href="#" className="hover:underline">
+            Privacy
+          </a>
+          <a href="#" className="hover:underline">
+            Terms
+          </a>
+        </div>
     </div>
   </div> 
  </div>

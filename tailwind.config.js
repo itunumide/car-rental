@@ -7,18 +7,9 @@ export default {
   theme: {
 
     extend: {
-      colors: {
-        customYellow: '#ffca08',
-        customP: '#aaaaaa',
-        customAccordionColor: '#5b5748',
-        customGray: '#1e1e1e',
-        formBg: '#1C1601',
-      },
-
-      screens: {
-        '500px': {'max': '500px'},
-      }
+      
     },
+
   },
   plugins: [
     require('tailwindcss'),

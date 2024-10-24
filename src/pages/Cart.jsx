@@ -34,7 +34,7 @@ const Cart = () => {
     const [addCart, setAddCart] =useState("")
     const increament = () => {
       setCount(count + 1);
-    };
+    }
     const decreament = () => {
       if (count > 1) {
       setCount(count - 1);
@@ -155,6 +155,7 @@ const Cart = () => {
           <div className=" w-11/12">
         <h2 className="bottom-0 py-4 pl-8  text-left text-2xl font-bold rounded-full bg-black text-[#FFCA08]">Cart&nbsp;totals</h2></div>
         <table  className="w-10/12 my-10  border-2 border-b">
+        
         <tbody>
           <tr className="border-b text-left">
             <th className="py-4  font-bold pl-4 border-b-">Subtotal</th>
