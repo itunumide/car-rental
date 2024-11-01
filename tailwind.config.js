@@ -7,6 +7,7 @@ export default {
   theme: {
 
     extend: {
+
       colors: {
         customYellow: '#ffca08',
         customP: '#aaaaaa',
@@ -20,7 +21,9 @@ export default {
       screens: {
         '500px': {'max': '500px'},
       }
+
     },
+
   },
   plugins: [
     require('tailwindcss'),

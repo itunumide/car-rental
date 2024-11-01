@@ -216,8 +216,8 @@ const FAQs = () => {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };
-
-export default FAQs;

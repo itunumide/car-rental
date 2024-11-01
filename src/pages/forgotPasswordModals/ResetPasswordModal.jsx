@@ -20,7 +20,7 @@ const ResetPasswordModal = ({ onNext }) => {
 
     return (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+            <div className="bg-white p-6 rounded-lg shadow-xl w-11/12 max-w-md mx-auto mt-12">
                 <div className="w-full max-w-md mx-auto text-center">
 
                     {/* Top Icon */}
@@ -41,7 +41,7 @@ const ResetPasswordModal = ({ onNext }) => {
                     </div>
 
                     {/* Heading */}
-                    <h2 className="text-2xl font-semibold mb-3">Set new password</h2>
+                    <h2 className="text-center text-2xl font-semibold mb-3">Set new password</h2>
 
                     {/* Subtext */}
                     <p className="text-gray-500 mb-6">
@@ -99,7 +99,7 @@ const ResetPasswordModal = ({ onNext }) => {
                     </form>
 
                     {/* Back to log in */}
-                    <div className="mt-6">
+                    <div className=" text-center mt-6">
                         <Link to="/login" className="text-sm text-gray-600 inline-flex items-center">
                             {/* Arrow with no underline on hover */}
                             <span className="mr-2 hover:no-underline">&larr;</span>
