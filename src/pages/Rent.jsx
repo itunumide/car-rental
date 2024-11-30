@@ -54,16 +54,16 @@ const Rent = () => {
     <>
       <PagesHero />
       <div className="mt-8 w-4/5 m-auto">
-        <div className="top flex justify-between">
+        <div className="top flex flex-col justify-between gap-4 sm:flex-row sm:justify-start">
           <div className="left w-[20%]">
-            <div className="rounded-3xl flex items-center justify-center bg-[#fffdf5] border-2 border-[#dedede] p-2 w-[12rem]">
+            <div className="rounded-3xl flex items-center justify-center bg-[#fffdf5] border-2 border-[#dedede] p-2 w-[12rem] sm:w-full">
             {/* Check if all cars are being displayed */}
             {paginatedCars.length === cars.length 
               ? "Showing all results" 
               : `Showing ${paginatedCars.length} results`}
           </div>
           </div>
-          <div className="right w-[80%] flex justify-end gap-4">
+          <div className="right w-[80%] flex justify-end gap-4 sm:w-full ml-[1.6rem] sm:ml-0">
             {/* Items per page dropdown */}
             <select className="rounded-3xl px-2 bg-white border-2 border-[#dedede]" value={itemsPerPage} onChange={(e) => setItemsPerPage(Number(e.target.value))}>
               <option value="16">16 Products</option>
