@@ -1,52 +1,97 @@
 import React, { useState } from 'react';
 import PagesHero from '../reusables/PagesHero';
-import Accordion from '../reusables/Accordion'
+import Accordion from '../reusables/Accordion';
+import axios from 'axios';
 import post from '../assets/post5.jpg';
 import { IoIosHelpCircle, IoIosHelp } from "react-icons/io";
 import { FaComment, FaCarSide, FaCar, FaCarCrash, FaCaravan, FaRegIdCard, FaCarBattery } from "react-icons/fa";
 
 const FAQs = () => {
   const [formValues, setFormValues] = useState({
-    name: '',
-    email: '',
+    yourName: '',
+    emailAddress: '',
     subject: '',
     department: '',
-    question: '',
+    message: '',
   });
   
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState('');
+
+
+  const validate = () => {
+    let tempErrors = {};
+    let isValid = true;
   
-  const handleInputChange = (e) => {
+
+    if (!formValues.yourName) {
+      tempErrors.yourName = 'Name is required';
+      isValid = false;
+    }
+
+    if (!formValues.emailAddress) {
+      tempErrors.emailAddress = 'Email is required';
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formValues.emailAddress)) {
+      tempErrors.emailAddress = 'Email is not valid';
+      isValid = false;
+    }
+
+    if (!formValues.subject) {
+      tempErrors.subject = 'Subject is required'
+      isValid = false;
+    }
+
+    if (!formValues.message) {
+      tempErrors.message = 'Please ask your question';
+      isValid = false;
+    }
+
+    setErrors(tempErrors);
+    return isValid;
+  };
+
+  
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const validateForm = () => {
-    let errors = {};
-    
-    // Validate name
-    if (!formValues.name) {
-      errors.name = 'Name is required';
-    }
-    
-    // Validate email
-    if (!formValues.email) {
-      errors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formValues.email)) {
-      errors.email = 'Email is invalid';
-    }
-    
-    return errors;
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length === 0) {
-      // No errors, submit the form
-      console.log('Form submitted successfully!', formValues);
-    } else {
-      setErrors(validationErrors);
+    if (validate()) {
+      setLoading(true);
+      setResponseMessage('');
+
+      try {
+        const finalFormData = {
+          ...formValues,
+          department: formValues.department || 'N/A',
+        };
+
+        // POST resquest to the backend API
+        const response = await axios.post('https://car-rental-okvm.onrender.com/contact-us', finalFormData);
+
+        // Handling successful response
+        setResponseMessage('Message sent successfully!');
+        setLoading(false);
+
+        // Clearing form fields after successful submission
+        setFormValues({
+          yourName: '',
+          emailAddress: '',
+          subject: '',
+          department: '',
+          message: '',
+        });
+
+      } catch (error) {
+        // Handling error response
+        setResponseMessage('Failed to send the message. Please try again.');
+        setLoading(false);
+      }
+
     }
   };
 
@@ -73,46 +118,52 @@ const FAQs = () => {
               <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center text-customAccordionColor'>
                 <div className="name-email flex w-[350px] justify-between 500px:flex 500px:flex-col 500px:leading-4">
                   <div className="name text-sm">
-                    <label className='text-lightGray'>Your Name (*)</label> <br />
+                    <label className='text-gray-200'>Your Name (*)</label> <br />
                     <input 
                       type="text" 
-                      name="name"
-                      value={formValues.name}
-                      onChange={handleInputChange}
-                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1'
+                      name="yourName"
+                      value={formValues.yourName}
+                      onChange={handleChange}
+                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] p-4'
                     />
-                    {errors.name && <p className="text-red-500">{errors.name}</p>}
+                    {errors.yourName && <p className="text-red-500">{errors.yourName}</p>}
                   </div>
 
                   <div className="email text-sm leading-loose 500px:mt-4">
-                    <label className='text-lightGray'>Your Email (*)</label> <br />
+                    <label className='text-gray-200'>Your Email (*)</label> <br />
                     <input 
                       type="text" 
-                      name="email"
-                      value={formValues.email}
-                      onChange={handleInputChange}
-                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1' 
+                      name="emailAddress"
+                      value={formValues.emailAddress}
+                      onChange={handleChange}
+                      className='w-[150px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] p-4' 
                     />
-                    {errors.email && <p className="text-red-500">{errors.email}</p>}
+                    {errors.emailAddress && <p className="text-red-500">{errors.emailAddress}</p>}
                   </div>                  
                 </div>
                 <br />
 
                 <div className="subject flex flex-col leading-loose">
-                  <label className='text-lightGray'>Subject</label>
+                  <label className='text-gray-200'>Subject</label>
                   <input 
                     type="text" 
                     name="subject"
                     value={formValues.subject}
-                    onChange={handleInputChange}
-                    className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1' 
+                    onChange={handleChange}
+                    className='w-[350px] h-[35px] rounded-2xl 500px:w-[350px] 500px:h-[30px] p-4' 
                   />
+                  {errors.subject && <p className='text-red-500 text-xs mt-1'>{errors.subject}</p>}
                 </div>
                 <br />
 
-                <div className="department flex flex-col leading-loose mx-2">
-                  <label className='text-lightGray'>Department</label>
-                  <select name="" id="" className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px] mt-1'>
+                <div className="department flex flex-col leading-loose">
+                  <label className='text-gray-200'>Department</label>
+                  <select 
+                     
+                    value={formValues.department}
+                    onChange={handleChange}
+                    className='w-[350px] h-[35px] px-4 rounded-2xl 500px:w-[350px] 500px:h-[30px] p-4'
+                  >
                     <option value="department">Business Department</option>
                     <option value="department">Personal Department</option>
                     <option value="department">Support Department</option>
@@ -123,18 +174,32 @@ const FAQs = () => {
                 <br />
 
                 <div className="question leading-loose">
-                  <label className='text-lightGray'>Your Question</label> <br />
+                  <label className='text-gray-200'>Your Question</label> <br />
                   <textarea 
-                    name="question" 
+                    name="message" 
                     rows="7" 
                     cols="45" 
-                    value={formValues.question}
-                    onChange={handleInputChange}
-                    className='rounded-2xl mt-1'
+                    value={formValues.message}
+                    onChange={handleChange}
+                    className='rounded-2xl p-4'
                   ></textarea>
+                  {errors.message && <p className='text-red-500 text-xs mt-1'>{errors.message}</p>}
                   <br />
-                  <button type="submit" className='bg-customYellow text-white w-[75px] h-7 rounded-3xl font-bold text-center mb-4'>Ask</button>
+                  <button 
+                    type="submit" 
+                    className='bg-customYellow w-[70px] h-7 rounded-3xl font-bold justify-center align-middle mb-5'
+                    disabled={loading}
+                  >
+                    {loading ? 'Sending...' : 'Ask'}
+                     
+                  </button>
                 </div>
+
+                {responseMessage && (
+                  <div className='mt-4 text-green-500'>
+                    <p>{responseMessage}</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -216,10 +281,23 @@ const FAQs = () => {
           </div>
         </div>
       </div>
-
-
     </div>
   );
 };
 
 export default FAQs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
