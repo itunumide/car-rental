@@ -216,6 +216,8 @@ const FAQs = () => {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };
