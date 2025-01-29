@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     // Exclude header and footer for the login and signup pages
-    if (location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/contact') {
+    if (location.pathname === '/login' || location.pathname === '/signup' || location.pathname === '/contac') {
       setShowHeaderFooter(false);
     } else {
       setShowHeaderFooter(true);

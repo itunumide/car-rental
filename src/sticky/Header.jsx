@@ -1,12 +1,13 @@
-import { NavLink, Link } from 'react-router-dom';
-import carlogo from '../assets/car-rental-logo.png';
-import Button from '../reusables/Button';
+import { NavLink, Link } from "react-router-dom";
+import carlogo from "../assets/car-rental-logo.png";
+import Button from "../reusables/Button";
 
 const Header = () => {
   return (
-  
     <div className="sticky p-4 hidden top-8 w-4/5 m-auto lg:flex justify-between items-center text-white rounded-[6rem] bg-[#000] z-20">
-      <Link to={'/'}><img src={carlogo} alt="car logo" className='w-[8rem]' /></Link>
+      <Link to={"/"}>
+        <img src={carlogo} alt="car logo" className="w-[8rem]" />
+      </Link>
 
       <div className="nav">
         <ul className="flex justify-between items-center gap-10 italic font-bold">
@@ -14,7 +15,9 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               Home
@@ -24,7 +27,9 @@ const Header = () => {
             <NavLink
               to="/shop"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               Rent
@@ -34,7 +39,9 @@ const Header = () => {
             <NavLink
               to="/locations"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               Locations
@@ -44,7 +51,9 @@ const Header = () => {
             <NavLink
               to="/faq"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               FAQ
@@ -54,7 +63,9 @@ const Header = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               About
@@ -64,7 +75,9 @@ const Header = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               Contact
@@ -74,7 +87,9 @@ const Header = () => {
             <NavLink
               to="/login"
               className={({ isActive }) =>
-                isActive ? 'text-[#FFCA08]' : 'text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300'
+                isActive
+                  ? "text-[#FFCA08]"
+                  : "text-white hover:text-[#FFCA08] hover:border-b-2 hover:border-[#FFCA08] rounded-b-md transition duration-300"
               }
             >
               Log In
@@ -82,8 +97,12 @@ const Header = () => {
           </li>
         </ul>
       </div>
-
-      <Button text="Request a Car" size="1rem" />
+      <NavLink
+        to="/contact"
+        className=""
+      >
+        <Button text="Request a Car" size="1rem" />
+      </NavLink>
     </div>
   );
 };
