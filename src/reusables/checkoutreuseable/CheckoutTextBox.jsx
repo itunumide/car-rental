@@ -1,5 +1,5 @@
 import fileicon from "../../assets/fileicon.svg";
-import Button from "./Button";
+import Button from "../Button";
 import { useState } from "react";
 
 const CheckoutTextBox = ({ type, text, paragraph }) => {
@@ -14,7 +14,6 @@ const CheckoutTextBox = ({ type, text, paragraph }) => {
         <img src={fileicon} alt="fileicon" />
       </div>
       <div>
-        {" "}
         {type === "link" && (
           <p className="bg-[#f4f4f4] text-center sm:text-left font-bold px-[3.2rem] sm:ml-[1.5rem] pt-[3rem] text-[1rem]  pb-[2rem] sm:py-[2rem] sm:text-[1.1rem] ">
             {paragraph}{" "}

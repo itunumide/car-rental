@@ -1,4 +1,4 @@
-import Input from "../../reusables/checkoutreuseable/Input";
+import Input from "../../reusables/Input";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
