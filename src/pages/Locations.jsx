@@ -8,12 +8,11 @@ import LocationHeader from "../reusables/LocationHeader";
 import LocationForm from "../reusables/LocationForm";
 import { useNavigate } from "react-router-dom";
 
-
 const Locations = () => {
   const navigate = useNavigate();
 
   const goToShop = () => {
-    navigate("/shop"); 
+    navigate("/shop");
   };
 
   return (
@@ -24,7 +23,7 @@ const Locations = () => {
         subtitle="Car Rental Locations"
         title="We Rent a car wherever you are and"
         highlight="enjoy!"
-        width={"max-w-[40rem]"}
+        width={"md:max-w-[40rem] max-w-[27rem] "}
       />
 
       <div className="mt-[4rem] md:mt-[10rem]">
@@ -32,8 +31,12 @@ const Locations = () => {
           <SvgDesignPricingT />
         </div>
         <div className="relative bg-[#1c1601] flex flex-col gap-8 pb-10">
-          <div className="locationCar 2xl:ml-20 -mt-72">
-            <img src={locationCar} alt="" style={{ width: "40rem" }} />
+          <div className="locationCar -mt-28 2xl:ml-20 md:-mt-72">
+            <img
+              src={locationCar}
+              alt=""
+              className={`w-[30rem] md:w-[40rem]`}
+            />
           </div>
           <div className="text-white">
             <LocationCard
@@ -71,8 +74,13 @@ const Locations = () => {
         <div className="svgtop relative ">
           <SvgDesignPricingB />
         </div>
-        <div className="locationCar relative left-[40rem] 2xl:ml-20 -mt-[24rem]">
-          <img src={locationCar1} alt="" style={{ width: "40rem" }} />
+        <div className="relative -mt-16 mb-10 md:mb-48 md:-mt-28 xl:-mt-56">
+          <div
+            className="locationCar absolute top-1/2 -translate-y-1/2 translate-x-1/4 md:translate-x-1  xl:translate-x-0 "
+            style={{ right: "5%" }}
+          >
+            <img src={locationCar1} alt="" className="w-[80%] md:w-[40rem]" />
+          </div>
         </div>
       </div>
       <div className="pt-10 flex flex-col items-center">

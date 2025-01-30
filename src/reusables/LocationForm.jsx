@@ -38,7 +38,7 @@ const LocationForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className=" flex flex-col items-center bg-[#1c1601] mt-12 pb-10 pt-6 shadow-[20px_20px_0_#e9e9e9] px-12 rounded-3xl w-[50%]"
+      className=" flex flex-col items-center w-[90%] bg-[#1c1601] mt-12 pb-10 pt-6 shadow-[20px_20px_0_#e9e9e9] px-12 rounded-3xl md:w-[50%]"
     >
       <div className="flex flex-wrap justify-between">
         <Input
