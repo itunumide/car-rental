@@ -6,8 +6,16 @@ import locationCar1 from "../assets/car-home-5.png";
 import LocationCard from "../reusables/LocationCard";
 import LocationHeader from "../reusables/LocationHeader";
 import LocationForm from "../reusables/LocationForm";
+import { useNavigate } from "react-router-dom";
+
 
 const Locations = () => {
+  const navigate = useNavigate();
+
+  const goToShop = () => {
+    navigate("/shop"); 
+  };
+
   return (
     <div>
       <PagesHero />
@@ -36,6 +44,7 @@ const Locations = () => {
               text={
                 "On three consecutive Saturdays in August, nearly seven miles of NYC's streets are opened for people to play, run, walk and bike. There are usually fun, interactive stations, from a water slide to a zip line. On three consecutive Saturdays in August, nearly seven miles of NYC's streets are opened for people to play, run, walk and bike. There are usually fun, interactive stations, from a water slide to a zip line."
               }
+              onClick={goToShop}
             />
             <LocationCard
               lat={34.052235}
@@ -45,6 +54,7 @@ const Locations = () => {
               text={
                 "On three consecutive Saturdays in August, nearly seven miles of NYC's streets are opened for people to play, run, walk and bike. There are usually fun, interactive stations, from a water slide to a zip line. On three consecutive Saturdays in August, nearly seven miles of NYC's streets are opened for people to play, run, walk and bike. There are usually fun, interactive stations, from a water slide to a zip line."
               }
+              onClick={goToShop}
             />
             <LocationCard
               lat={40.712776}
@@ -54,6 +64,7 @@ const Locations = () => {
               text={
                 "On three consecutive Saturdays in August, nearly seven miles of NYC's streets are opened for people to play, run, walk and bike. There are usually fun, interactive stations, from a water slide to a zip line. On three consecutive Saturdays in August, nearly seven miles of NYC's streets are opened for people to play, run, walk and bike. There are usually fun, interactive stations, from a water slide to a zip line."
               }
+              onClick={goToShop}
             />
           </div>
         </div>

@@ -1,7 +1,7 @@
-import Button from "../reusables/Button";
+import Button from "../reusables/checkoutreuseable/Button";
 import MapComponent from "./MapComponent";
 
-const LocationCard = ({lat, lng, state, country, text}) => {
+const LocationCard = ({lat, lng, state, country, text, onClick}) => {
   return (
     <div className="flex gap-12 px-12 py-10">
       <MapComponent lat={lat} lng={lng} />
@@ -13,7 +13,7 @@ const LocationCard = ({lat, lng, state, country, text}) => {
         <p className="leading-8">
          {text}
         </p>
-        <Button text={"Rent"} />
+        <Button text={"Rent"} onClick={onClick} width="10rem" />
       </div>
       
     </div>

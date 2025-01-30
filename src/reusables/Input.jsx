@@ -7,15 +7,19 @@ const Input = ({
   isRequired,
   onChange,
   width = "md:w-full",
-  bg ='bg-transparent'
+  bg ='bg-transparent',
+  margin ="my-[1rem]",
+  color="text-[#ef4444]",
+  textcl,
+  text
 }) => {
   return (
     <div
-      className={`${width} text-[#595959] w-full flex flex-col my-[1rem]`}
+      className={`${width} text-[#595959] w-full flex flex-col ${margin}`}
     >
-      <label htmlFor={htmlFor} className="my-[1rem]">
+      <label htmlFor={htmlFor} className={`${margin} ${textcl} ${text}`}>
         {label}
-        {isRequired && <span className="text-red-500 ml-1">*</span>}
+        {isRequired && <span className={`${color} ml-1`}>*</span>}
       </label>
       <input
         type={type}

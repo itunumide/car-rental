@@ -171,7 +171,7 @@ export const CheckoutLeft = ({ formData, handleChange }) => {
             value={formData.additionalInformation}
             onChange={handleChange}
             placeholder="Notes about your order, e.g. special notes for delivery."
-            className="border p-[1rem] border-[#dcdcdc] text-[#595959] rounded-3xl h-[10rem] bg-transparent"
+            className="border p-[1rem] border-[#dcdcdc] text-[#595959] focus:outline-none focus:ring-2 focus:ring-yellow-500 rounded-3xl h-[10rem] bg-transparent"
           ></textarea>
         </div>
       </div>
